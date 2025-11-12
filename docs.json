@@ -1,8 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "Vidau.",
-  "description": "Vidau介绍",
+  "name": "Example Co.",
+  "description": "Example Co. 是一家提供示例内容和占位符文本的公司。",
   "colors": {
     "primary": "#3B82F6",
     "light": "#F8FAFC",
@@ -13,11 +13,12 @@
       {
         "dropdown": "文档",
         "icon": "book",
-        "description": "如何使用开放的API接口产品",
+        "description": "如何使用 Example Co. 产品",
         "groups": [
           {
             "group": "快速入门",
             "pages": [
+              "index",
               "quickstart"
             ]
           },
@@ -85,13 +86,13 @@
     "links": [
       {
         "label": "社区",
-        "href": "https://www.vidau.ai"
+        "href": "https://example.com/community"
       }
     ],
     "primary": {
       "type": "button",
       "label": "立即开始",
-      "href": "https://www.vidau.ai"
+      "href": "https://example.com/start"
     }
   },
   "footer": {
