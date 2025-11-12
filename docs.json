@@ -13,8 +13,7 @@
           {
             "group": "快速开始",
             "pages": [
-              "api/getting-started",
-              "api/authentication"
+              "getting-started"
             ]
           },
            {

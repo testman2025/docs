@@ -755,7 +755,7 @@
   },
   "servers": [
     {
-      "url": "https://vidau-test-api.superads.cn/api",
+      "url": "https://app-api.vidau.info/api",
       "description": "测试环境"
     }
   ],
