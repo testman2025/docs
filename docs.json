@@ -11,7 +11,7 @@
   "navigation": {
     "dropdowns": [
       {
-        "dropdown": "简介",
+        "dropdown": "介绍",
         "icon": "info",
         "description": "Vidau平台介绍",
         "pages": [
@@ -61,45 +61,57 @@
     }
   },
   "logo": {
-    "light": "/video-remix/logo1.svg",
-    "dark": "/video-remix/logo1.svg",
-    "href": "https://static.vidau.ai"
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg",
+    "href": "https://www.vidau.ai"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "社区",
-        "href": "https://www.vidau.ai"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
-      "label": "立即开始",
-      "href": "https://www.vidau.ai"
+      "label": "控制台",
+      "href": "https://console.vidau.ai"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://www.vidau.ai",
-      "linkedin": "https://www.vidau.ai",
-      "github": "https://www.vidau.ai",
-      "slack": "https://www.vidau.ai"
+      "x": "https://twitter.com/vidau",
+      "linkedin": "https://linkedin.com/company/vidau",
+      "github": "https://github.com/vidau",
+      "discord": "https://discord.gg/vidau"
     },
     "links": [
+      {
+        "header": "产品",
+        "items": [
+          {
+            "label": "功能介绍",
+            "href": "https://www.vidau.ai/features"
+          },
+          {
+            "label": "定价",
+            "href": "https://www.vidau.ai/pricing"
+          },
+          {
+            "label": "使用案例",
+            "href": "https://www.vidau.ai/cases"
+          }
+        ]
+      },
       {
         "header": "资源",
         "items": [
           {
-            "label": "客户案例",
-            "href": "https://www.vidau.ai"
+            "label": "文档",
+            "href": "https://docs.vidau.ai"
           },
           {
-            "label": "企业版",
-            "href": "https://www.vidau.ai"
+            "label": "博客",
+            "href": "https://blog.vidau.ai"
           },
           {
-            "label": "申请预览",
-            "href": "https://www.vidau.ai"
+            "label": "社区",
+            "href": "https://community.vidau.ai"
           }
         ]
       },
@@ -107,16 +119,33 @@
         "header": "公司",
         "items": [
           {
-            "label": "招聘信息",
-            "href": "https://www.vidau.ai"
+            "label": "关于我们",
+            "href": "https://www.vidau.ai/about"
           },
           {
-            "label": "博客",
-            "href": "https://www.vidau.ai"
+            "label": "联系我们",
+            "href": "https://www.vidau.ai/contact"
           },
           {
             "label": "隐私政策",
             "href": "https://www.vidau.ai/privacy-policy/"
+          }
+        ]
+      },
+      {
+        "header": "支持",
+        "items": [
+          {
+            "label": "帮助中心",
+            "href": "https://help.vidau.ai"
+          },
+          {
+            "label": "状态页面",
+            "href": "https://status.vidau.ai"
+          },
+          {
+            "label": "提交工单",
+            "href": "https://support.vidau.ai"
           }
         ]
       }
@@ -130,8 +159,8 @@
       "enabled": true
     },
     "cookies": {
-      "key": "example_cookie_key",
-      "value": "example_cookie_value"
+      "key": "vidau_cookie_key",
+      "value": "vidau_cookie_value"
     }
   },
   "contextual": {
@@ -142,11 +171,21 @@
       "claude"
     ]
   },
+  "features": {
+    "search": true,
+    "darkMode": true,
+    "tableOfContents": true,
+    "breadcrumbs": true
+  },
+  "sidebar": {
+    "collapsible": true,
+    "autoCollapse": false
+  },
   "errors": {
     "404": {
       "redirect": false,
       "title": "页面未找到",
-      "description": "这个页面**到底**_去哪了_？"
+      "description": "抱歉，我们找不到您要查找的页面。请检查URL或返回[首页](/)"
     }
   }
 }
