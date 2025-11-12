@@ -1,8 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "明静",
-  "description": "简单介绍一下我们是做什么的",
+  "name": "Vidau",
+  "description": "AI媒体生成平台，让任何团队都能以低预算、无需AI专业知识快速部署AI媒体生成功能",
   "colors": {
     "primary": "#3B82F6",
     "light": "#F8FAFC",
@@ -13,29 +13,29 @@
       {
         "dropdown": "文档",
         "icon": "book",
-        "description": "如何使用 Example Co. 产品",
+        "description": "如何使用Vidau产品",
         "groups": [
           {
             "group": "快速开始",
             "pages": [
               "index",
-              "quickstart"
+              "getting-started"
             ]
           },
           {
-            "group": "自定义",
+            "group": "API参考",
             "pages": [
-              "settings",
-              "users",
-              "features"
+              "api/introduction",
+              "api/authentication",
+              "api/tasks"
             ]
           },
           {
-            "group": "计费",
+            "group": "功能特性",
             "pages": [
-              "billing/overview",
-              "billing/payments",
-              "billing/subscriptions"
+              "features/vision-inference-engine",
+              "features/custom-infrastructure",
+              "features/renewable-energy"
             ]
           }
         ]
@@ -53,43 +53,47 @@
   "logo": {
     "light": "/logo-light.svg",
     "dark": "/logo-dark.svg",
-    "href": "https://example.com"
+    "href": "https://vidau.com"
   },
   "navbar": {
     "links": [
       {
         "label": "社区",
-        "href": "https://example.com/community"
+        "href": "https://vidau.com/community"
+      },
+      {
+        "label": "定价",
+        "href": "https://vidau.com/pricing"
       }
     ],
     "primary": {
       "type": "button",
       "label": "开始使用",
-      "href": "https://example.com/start"
+      "href": "https://vidau.com/start"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/example",
-      "linkedin": "https://www.linkedin.com/company/example",
-      "github": "https://github.com/example",
-      "slack": "https://example.com/community"
+      "x": "https://x.com/vidau",
+      "linkedin": "https://www.linkedin.com/company/vidau",
+      "github": "https://github.com/vidau",
+      "slack": "https://vidau.com/community"
     },
     "links": [
       {
         "header": "资源",
         "items": [
           {
-            "label": "客户",
-            "href": "https://example.com/customers"
+            "label": "客户案例",
+            "href": "https://vidau.com/customers"
           },
           {
             "label": "企业版",
-            "href": "https://example.com/enterprise"
+            "href": "https://vidau.com/enterprise"
           },
           {
-            "label": "申请预览",
-            "href": "https://example.com/preview"
+            "label": "API状态",
+            "href": "https://status.vidau.com"
           }
         ]
       },
@@ -97,16 +101,33 @@
         "header": "公司",
         "items": [
           {
-            "label": "招聘",
-            "href": "https://example.com/careers"
+            "label": "关于我们",
+            "href": "https://vidau.com/about"
           },
           {
             "label": "博客",
-            "href": "https://example.com/blog"
+            "href": "https://vidau.com/blog"
           },
           {
             "label": "隐私政策",
-            "href": "https://example.com/legal/privacy"
+            "href": "https://vidau.com/legal/privacy"
+          }
+        ]
+      },
+      {
+        "header": "开发",
+        "items": [
+          {
+            "label": "文档",
+            "href": "https://docs.vidau.com"
+          },
+          {
+            "label": "GitHub",
+            "href": "https://github.com/vidau"
+          },
+          {
+            "label": "SDK",
+            "href": "https://vidau.com/sdk"
           }
         ]
       }
@@ -120,8 +141,8 @@
       "enabled": true
     },
     "cookies": {
-      "key": "example_cookie_key",
-      "value": "example_cookie_value"
+      "key": "vidau_cookie_key",
+      "value": "vidau_cookie_value"
     }
   },
   "contextual": {
@@ -135,8 +156,8 @@
   "errors": {
     "404": {
       "redirect": false,
-      "title": "找不到页面",
-      "description": "这个_页面_到底**发生了什么**？"
+      "title": "页面未找到",
+      "description": "抱歉，我们找不到您要查找的页面。请检查URL或返回[首页](/)"
     }
   }
 }
