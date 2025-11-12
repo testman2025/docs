@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Vidau",
-  "description": "Vidau是一家提供示例内容和占位符文本的公司。",
+  "description": "Vidau - AI媒体生成平台",
   "colors": {
     "primary": "#3B82F6",
     "light": "#F8FAFC",
@@ -11,43 +11,31 @@
   "navigation": {
     "dropdowns": [
       {
-        "dropdown": "文档",
-        "icon": "book",
-        "description": "如何使用 Example Co. 产品",
-        "groups": [
-          {
-            "group": "快速入门",
-            "pages": [
-              "index"
-            ]
-          },
-          {
-            "group": "自定义配置",
-            "pages": [
-              "settings",
-              "users",
-              "features"
-            ]
-          },
-          {
-            "group": "计费管理",
-            "pages": [
-              "billing/overview",
-              "billing/payments",
-              "billing/subscriptions"
-            ]
-          }
+        "dropdown": "简介",
+        "icon": "info",
+        "description": "Vidau平台介绍",
+        "pages": [
+          "index"
         ]
       },
       {
-        "dropdown": "API 参考",
-        "icon": "terminal",
-        "description": "如何使用 Example Co. API",
+        "dropdown": "API",
+        "icon": "code",
+        "description": "完整的API参考文档",
         "groups": [
           {
-            "group": "API 参考",
+            "group": "快速开始",
             "pages": [
-              "api-reference/introduction"
+              "api/getting-started",
+              "api/authentication"
+            ]
+          },
+          {
+            "group": "核心接口",
+            "pages": [
+              "api/images",
+              "api/videos",
+              "api/models"
             ]
           },
           {
