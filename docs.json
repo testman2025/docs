@@ -9,20 +9,7 @@
     "dark": "#0F172A"
   },
   "navigation": {
-    "dropdowns": [
-      {
-        "dropdown": "介绍",
-        "icon": "info",
-        "description": "Vidau平台介绍",
-        "pages": [
-          "index"
-        ]
-      },
-      {
-        "dropdown": "API",
-        "icon": "code",
-        "description": "完整的API参考文档",
-        "groups": [
+      "groups": [
           {
             "group": "快速开始",
             "pages": [
@@ -45,8 +32,6 @@
             }
           }
         ]
-      }
-    ]
   },
   "api": {
     "playground": {
