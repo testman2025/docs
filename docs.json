@@ -1,8 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "Example Co.",
-  "description": "Example Co. 是一家提供示例内容和占位符文本的公司。",
+  "name": "Vidau.",
+  "description": "Vidau介绍",
   "colors": {
     "primary": "#3B82F6",
     "light": "#F8FAFC",
@@ -86,13 +86,13 @@
     "links": [
       {
         "label": "社区",
-        "href": "https://example.com/community"
+        "href": "https://www.vidau.ai"
       }
     ],
     "primary": {
       "type": "button",
       "label": "立即开始",
-      "href": "https://example.com/start"
+      "href": "https://www.vidau.ai"
     }
   },
   "footer": {
