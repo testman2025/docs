@@ -13,12 +13,11 @@
       {
         "dropdown": "文档",
         "icon": "book",
-        "description": "如何使用 Example Co. 产品",
+        "description": "如何使用开放的API接口产品",
         "groups": [
           {
             "group": "快速入门",
             "pages": [
-              "index",
               "quickstart"
             ]
           },
