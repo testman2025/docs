@@ -1,78 +1,127 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "明静",
+  "description": "简单介绍一下我们是做什么的",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#3B82F6",
+    "light": "#F8FAFC",
+    "dark": "#0F172A"
   },
-  "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "dropdowns": [
       {
-        "tab": "Guides",
+        "dropdown": "文档",
+        "icon": "book",
+        "description": "如何使用 Example Co. 产品",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "快速开始",
             "pages": [
               "index",
-              "development"
+              "quickstart"
+            ]
+          },
+          {
+            "group": "自定义",
+            "pages": [
+              "settings",
+              "users",
+              "features"
+            ]
+          },
+          {
+            "group": "计费",
+            "pages": [
+              "billing/overview",
+              "billing/payments",
+              "billing/subscriptions"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
+        "dropdown": "更新日志",
+        "icon": "history",
+        "description": "更新和变更",
+        "pages": [
+          "changelog"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg",
+    "href": "https://example.com"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "社区",
+        "href": "https://example.com/community"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "开始使用",
+      "href": "https://example.com/start"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/example",
+      "linkedin": "https://www.linkedin.com/company/example",
+      "github": "https://github.com/example",
+      "slack": "https://example.com/community"
+    },
+    "links": [
+      {
+        "header": "资源",
+        "items": [
+          {
+            "label": "客户",
+            "href": "https://example.com/customers"
+          },
+          {
+            "label": "企业版",
+            "href": "https://example.com/enterprise"
+          },
+          {
+            "label": "申请预览",
+            "href": "https://example.com/preview"
+          }
+        ]
+      },
+      {
+        "header": "公司",
+        "items": [
+          {
+            "label": "招聘",
+            "href": "https://example.com/careers"
+          },
+          {
+            "label": "博客",
+            "href": "https://example.com/blog"
+          },
+          {
+            "label": "隐私政策",
+            "href": "https://example.com/legal/privacy"
+          }
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-XXXXXXXXXX"
+    },
+    "telemetry": {
+      "enabled": true
+    },
+    "cookies": {
+      "key": "example_cookie_key",
+      "value": "example_cookie_value"
     }
   },
   "contextual": {
@@ -80,18 +129,14 @@
       "copy",
       "view",
       "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "claude"
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "找不到页面",
+      "description": "这个_页面_到底**发生了什么**？"
     }
   }
 }
