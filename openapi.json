@@ -1,217 +1,763 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "OpenAPI Plant Store",
-    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
-    "license": {
-      "name": "MIT"
-    },
+    "title": "默认模块",
+    "description": "",
     "version": "1.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/avatar/videoPush": {
+      "post": {
+        "summary": "创建视频数字人接口",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "3278a43d261c4d978c616a3563c67007",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "client-id",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "1948089209.1754358435",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "content-type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "application/json",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "device",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "windows",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "device-id",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "BIiKfDvCsFN3Qj8F",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "lang",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "en",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "priority",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "u=1, i",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "3278a43d261c4d978c616a3563c67007",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "3278a43d261c4d978c616a3563c67007",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "video_url": {
+                    "type": "string"
+                  },
+                  "audio_url": {
+                    "type": "string"
+                  },
+                  "tts_time": {
+                    "type": "integer"
+                  },
+                  "video_time": {
+                    "type": "integer"
+                  },
+                  "quantity": {
+                    "type": "integer"
+                  },
+                  "source": {
+                    "type": "integer"
+                  },
+                  "script": {
+                    "type": "string"
+                  },
+                  "voice_name": {
+                    "type": "string"
+                  },
+                  "voice_id": {
+                    "type": "string"
+                  },
+                  "country_code": {
+                    "type": "string"
+                  },
+                  "gender": {
+                    "type": "string"
+                  },
+                  "voice_time": {
+                    "type": "number"
+                  },
+                  "speed": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "video_url",
+                  "audio_url",
+                  "tts_time",
+                  "video_time",
+                  "quantity",
+                  "source",
+                  "script",
+                  "voice_name",
+                  "voice_id",
+                  "country_code",
+                  "gender",
+                  "voice_time",
+                  "speed"
+                ]
+              },
+              "example": {
+                "video_url": "https://res-test.superads.cn/upload/doubao_aigc/e9/e94b66df1eef6b9729ec0b636d215acd.mp4",
+                "audio_url": "https://res-test.superads.cn/upload/template_systhesis/21/219ccb68cfa09ddc4a9d23c02ed9d314.mp3",
+                "tts_time": 4,
+                "video_time": 4,
+                "quantity": 1,
+                "source": 1,
+                "script": "I am US President Trump, and I want to destroy the world",
+                "voice_name": "River",
+                "voice_id": "SAz9YHcvj6GT2YYXdXww",
+                "country_code": "US",
+                "gender": "female",
+                "voice_time": 3.1869375,
+                "speed": 1
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/avatar/imagePush": {
+      "post": {
+        "summary": "创建图片数字人接口",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "75725cb555a54761b039098ed2595e9b",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "client-id",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "1948089209.1754358435",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "content-type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "application/json",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "device",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "windows",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "device-id",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "BIiKfDvCsFN3Qj8F",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "lang",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "en",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "priority",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "u=1, i",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "75725cb555a54761b039098ed2595e9b",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "75725cb555a54761b039098ed2595e9b",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model_name": {
+                    "type": "string"
+                  },
+                  "image_url": {
+                    "type": "string"
+                  },
+                  "audio_url": {
+                    "type": "string"
+                  },
+                  "tts_time": {
+                    "type": "integer"
+                  },
+                  "pic_time": {
+                    "type": "integer"
+                  },
+                  "quantity": {
+                    "type": "integer"
+                  },
+                  "script": {
+                    "type": "null"
+                  },
+                  "voice_name": {
+                    "type": "null"
+                  },
+                  "voice_id": {
+                    "type": "null"
+                  },
+                  "country_code": {
+                    "type": "null"
+                  },
+                  "gender": {
+                    "type": "null"
+                  },
+                  "voice_time": {
+                    "type": "null"
+                  },
+                  "speed": {
+                    "type": "null"
+                  }
+                },
+                "required": [
+                  "model_name",
+                  "image_url",
+                  "audio_url",
+                  "tts_time",
+                  "pic_time",
+                  "quantity",
+                  "script",
+                  "voice_name",
+                  "voice_id",
+                  "country_code",
+                  "gender",
+                  "voice_time",
+                  "speed"
+                ]
+              },
+              "example": {
+                "model_name": "1",
+                "image_url": "https://res-test.superads.cn/upload/p2v_upload/f3/f3dced6ba04e131adc22e532ade0691e.png",
+                "audio_url": "https://res-test.superads.cn/upload/p2v_upload/53/53e1b0fee230544843aa840b457c254e.m4a",
+                "tts_time": 0,
+                "pic_time": 0,
+                "quantity": 1,
+                "script": null,
+                "voice_name": null,
+                "voice_id": null,
+                "country_code": null,
+                "gender": null,
+                "voice_time": null,
+                "speed": null
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/avatar/taskList": {
+      "post": {
+        "summary": "状态查询接口：avatar/taskList",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "4df5fb78e057445588688670dcdcdf65",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "client-id",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "1948089209.1754358435",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "content-type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "application/json",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "device",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "windows",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "device-id",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "BIiKfDvCsFN3Qj8F",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "lang",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "en",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "priority",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "u=1, i",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "4df5fb78e057445588688670dcdcdf65",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "4df5fb78e057445588688670dcdcdf65",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ts": {
+                      "type": "integer"
+                    },
+                    "webVersion": {
+                      "type": "null"
+                    },
+                    "requestNo": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "all_completed": {
+                          "type": "boolean"
+                        },
+                        "list": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "thumb_url": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "file_url": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "third_id": {
+                                "type": "string"
+                              },
+                              "creation_name": {
+                                "type": "string"
+                              },
+                              "response_data": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "gender": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "voice_id": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "user_task_feedback": {
+                                "type": "object",
+                                "properties": {
+                                  "updated_at": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "task_no": {
+                                    "type": "string"
+                                  },
+                                  "created_at": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "integer"
+                                  },
+                                  "type": {
+                                    "type": "integer"
+                                  },
+                                  "app_id": {
+                                    "type": "integer"
+                                  },
+                                  "content": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "status": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "updated_at",
+                                  "task_no",
+                                  "created_at",
+                                  "id",
+                                  "type",
+                                  "app_id",
+                                  "content",
+                                  "status"
+                                ]
+                              },
+                              "created_at": {
+                                "type": "string"
+                              },
+                              "mode_type": {
+                                "type": "string"
+                              },
+                              "task_id": {
+                                "type": "string"
+                              },
+                              "voice_name": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "source": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "progress_bar": {
+                                "type": "integer"
+                              },
+                              "speed": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "script": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "avatar_type": {
+                                "type": "integer"
+                              },
+                              "voice_time": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "country_code": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "can_retry": {
+                                "type": "boolean"
+                              },
+                              "post_data": {
+                                "type": "string"
+                              },
+                              "model_name": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "integer"
+                              },
+                              "status": {
+                                "type": "integer"
+                              },
+                              "error_text": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "thumb_url",
+                              "file_url",
+                              "third_id",
+                              "creation_name",
+                              "response_data",
+                              "gender",
+                              "voice_id",
+                              "user_task_feedback",
+                              "created_at",
+                              "mode_type",
+                              "task_id",
+                              "voice_name",
+                              "source",
+                              "progress_bar",
+                              "speed",
+                              "script",
+                              "avatar_type",
+                              "voice_time",
+                              "country_code",
+                              "can_retry",
+                              "post_data",
+                              "model_name",
+                              "id",
+                              "status"
+                            ]
+                          }
+                        }
+                      },
+                      "required": [
+                        "all_completed",
+                        "list"
+                      ]
+                    },
+                    "code": {
+                      "type": "integer"
+                    },
+                    "msg": {
+                      "type": "string"
+                    },
+                    "exception": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "ts",
+                    "webVersion",
+                    "requestNo",
+                    "data",
+                    "code",
+                    "msg",
+                    "exception"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "webhooks": {},
+  "components": {
+    "schemas": {},
+    "securitySchemes": {}
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
+      "url": "https://vidau-test-api.superads.cn/api",
+      "description": "测试环境"
     }
   ],
-  "security": [
-    {
-      "bearerAuth": []
-    }
-  ],
-  "paths": {
-    "/plants": {
-      "get": {
-        "description": "Returns all plants from the system that the user has access to",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The maximum number of results to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Plant response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Plant"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "description": "Creates a new plant in the store",
-        "requestBody": {
-          "description": "Plant to add to the store",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewPlant"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "plant response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Plant"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/plants/{id}": {
-      "delete": {
-        "description": "Deletes a single plant based on the ID supplied",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "ID of plant to delete",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Plant deleted",
-            "content": {}
-          },
-          "400": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "webhooks": {
-    "/plant/webhook": {
-      "post": {
-        "description": "Information about a new plant added to the store",
-        "requestBody": {
-          "description": "Plant added to the store",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewPlant"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Return a 200 status to indicate that the data was received successfully"
-          }
-        }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "Plant": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name of the plant",
-            "type": "string"
-          },
-          "tag": {
-            "description": "Tag to specify the type",
-            "type": "string"
-          }
-        }
-      },
-      "NewPlant": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Plant"
-          },
-          {
-            "required": [
-              "id"
-            ],
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "Identification number of the plant",
-                "type": "integer",
-                "format": "int64"
-              }
-            }
-          }
-        ]
-      },
-      "Error": {
-        "required": [
-          "error",
-          "message"
-        ],
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "securitySchemes": {
-      "bearerAuth": {
-        "type": "http",
-        "scheme": "bearer"
-      }
-    }
-  }
+  "security": []
 }
