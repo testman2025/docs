@@ -81,21 +81,21 @@
     "links": [
       {
         "label": "社区",
-        "href": "https://example.com/community"
+        "href": "https://www.vidau.ai"
       }
     ],
     "primary": {
       "type": "button",
       "label": "立即开始",
-      "href": "https://example.com/start"
+      "href": "https://www.vidau.ai"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/example",
-      "linkedin": "https://www.linkedin.com/company/example",
-      "github": "https://github.com/example",
-      "slack": "https://example.com/community"
+      "x": "https://www.vidau.ai",
+      "linkedin": "https://www.vidau.ai",
+      "github": "https://www.vidau.ai",
+      "slack": "https://www.vidau.ai"
     },
     "links": [
       {
@@ -103,15 +103,15 @@
         "items": [
           {
             "label": "客户案例",
-            "href": "https://example.com/customers"
+            "href": "https://www.vidau.ai"
           },
           {
             "label": "企业版",
-            "href": "https://example.com/enterprise"
+            "href": "https://www.vidau.ai"
           },
           {
             "label": "申请预览",
-            "href": "https://example.com/preview"
+            "href": "https://www.vidau.ai"
           }
         ]
       },
@@ -120,15 +120,15 @@
         "items": [
           {
             "label": "招聘信息",
-            "href": "https://example.com/careers"
+            "href": "https://www.vidau.ai"
           },
           {
             "label": "博客",
-            "href": "https://example.com/blog"
+            "href": "https://www.vidau.ai"
           },
           {
             "label": "隐私政策",
-            "href": "https://example.com/legal/privacy"
+            "href": "https://www.vidau.ai/privacy-policy/"
           }
         ]
       }
