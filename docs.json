@@ -17,15 +17,7 @@
               "api/authentication"
             ]
           },
-          {
-            "group": "核心接口",
-            "pages": [
-              "api/images",
-              "api/videos",
-              "api/models"
-            ]
-          },
-          {
+           {
             "group": "接口端点",
             "openapi": {
               "source": "openapi.json"
