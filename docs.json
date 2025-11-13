@@ -26,7 +26,7 @@
   },
   "api": {
     "playground": {
-      "display": "none"
+      "display": "interactive"
     },
     "examples": {
       "languages": [
