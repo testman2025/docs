@@ -9,20 +9,43 @@
     "dark": "#0F172A"
   },
   "navigation": {
-      "groups": [
-          {
-            "group": "快速开始",
-            "pages": [
-              "getting-started"
-            ]
-          },
-           {
-            "group": "接口端点",
-            "openapi": {
-              "source": "openapi.json"
-            }
-          }
+    "groups": [
+      {
+        "group": "概览",
+        "pages": [
+          "overview/platform-introduction",
+          "overview/pricing",
+          "overview/models"
         ]
+      },
+      {
+        "group": "接口文档",
+        "pages": [
+          "api/get-api-key",
+          {
+            "group": "视频任务接口",
+            "openapi": {
+              "source": "openapi.json",
+              "tag": "video"
+            }
+          },
+          {
+            "group": "图片任务接口",
+            "openapi": {
+              "source": "openapi.json",
+              "tag": "image"
+            }
+          },
+          "api/changelog"
+        ]
+      },
+      {
+        "group": "条款和协议",
+        "pages": [
+          "terms/terms-and-conditions"
+        ]
+      }
+    ]
   },
   "api": {
     "playground": {
@@ -32,7 +55,9 @@
       "languages": [
         "javascript",
         "curl",
-        "python"
+        "python",
+        "java",
+        "go"
       ]
     }
   },
