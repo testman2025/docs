@@ -4,9 +4,9 @@
   "name": "Vidau",
   "description": "Vidau - AI Media Generation Platform",
   "colors": {
-    "primary": "#3B82F6",
-    "light": "#F8FAFC",
-    "dark": "#0F172A"
+    "primary": "#3459FF",
+    "light": "#3452FF",
+    "dark": "#425DFF"
   },
   "navigation": {
     "groups": [
