@@ -1,8 +1,8 @@
 ---
 title: " Getting started with the Vidau API | Vidau Docs"
 description: "Get started with Vidau's powerful AI API platform by learning the basics. This guide will help you with the initial setup, authentication, and creating your first AI task."
-mode: "custom"
 ---
+
 ## [介绍](#introduction)
 
 欢迎来到 Vidau AI 平台文档。
@@ -22,11 +22,8 @@ Vidau通过API提供一套强大的AI功能套件。
 开始使用Vidau API：
 
 1. [注册](https://console.vidau.com/signup) Vidau账户
-
 2. 从控制台获取您的API密钥
-
 3. 学习如何[连接和认证](https://docs.vidau.com/getting-started/how-to-connect)我们的API
-
 4. 使用我们的[API参考文档](https://docs.vidau.com/ai-inference/api-reference)尝试第一个请求
 
 我们的文档包含详细指南、API参考和示例，帮助您快速有效地将AI功能集成到应用中。
@@ -40,9 +37,7 @@ Vidau API在所有服务中遵循一致的设计模式。理解这些核心概�
 我们的API围绕**任务**概念构建。每个请求代表要执行的特定任务，如文本分析、图像识别或语音处理。这种任务基础架构实现了：
 
 - 跨不同功能的一致请求结构
-
 - 计算密集型操作的异步处理
-
 - 基于任务需求的高效资源分配
 
 每个API调用接受对象数组作为输入，其中每个对象代表要执行的单个**任务**。您可以在单个请求中发送任意数量的任务，每个任务都将独立处理。每个对象的结构根据任务类型而变化。
@@ -52,9 +47,7 @@ Vidau API在所有服务中遵循一致的设计模式。理解这些核心概�
 每个API请求共享这些基本参数：
 
 - taskType: 标识要执行的操作（textAnalysis, imageRecognition, speechProcessing）
-
 - taskId: 您生成的唯一标识符，用于跟踪请求和匹配响应。如果任务失败或出现意外行为，在联系支持时提taskId能帮助我们快速定位请求并提供帮助
-
 - includeCost: 可选标志，用于在响应中包含成本信息
 
 ```json
@@ -74,3 +67,4 @@ Vidau API在所有服务中遵循一致的设计模式。理解这些核心概�
   }
 
 ]
+```
