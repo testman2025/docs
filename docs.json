@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Vidau",
-  "description": "Vidau - AI媒体生成平台",
+  "description": "Vidau - AI Media Generation Platform",
   "colors": {
     "primary": "#3B82F6",
     "light": "#F8FAFC",
@@ -11,26 +11,26 @@
   "navigation": {
     "groups": [
       {
-        "group": "概览",
+        "group": "Overview",
         "pages": [
-          "overview/platform-introduction",
+          "overview/introduction",
           "overview/pricing",
           "overview/models"
         ]
       },
       {
-        "group": "接口文档",
+        "group": "API Documentation",
         "pages": [
           "api/get-api-key",
           {
-            "group": "视频任务接口",
+            "group": "Video Task APIs",
             "openapi": {
               "source": "openapi.json",
               "tag": "video"
             }
           },
           {
-            "group": "图片任务接口",
+            "group": "Image Task APIs",
             "openapi": {
               "source": "openapi.json",
               "tag": "image"
@@ -40,7 +40,7 @@
         ]
       },
       {
-        "group": "条款和协议",
+        "group": "Terms & Agreements",
         "pages": [
           "terms/terms-and-conditions"
         ]
@@ -70,7 +70,7 @@
     "links": [],
     "primary": {
       "type": "button",
-      "label": "控制台",
+      "label": "Console",
       "href": "https://console.vidau.ai"
     }
   },
@@ -83,69 +83,69 @@
     },
     "links": [
       {
-        "header": "产品",
+        "header": "Product",
         "items": [
           {
-            "label": "功能介绍",
+            "label": "Features",
             "href": "https://www.vidau.ai/features"
           },
           {
-            "label": "定价",
+            "label": "Pricing",
             "href": "https://www.vidau.ai/pricing"
           },
           {
-            "label": "使用案例",
+            "label": "Use Cases",
             "href": "https://www.vidau.ai/cases"
           }
         ]
       },
       {
-        "header": "资源",
+        "header": "Resources",
         "items": [
           {
-            "label": "文档",
+            "label": "Documentation",
             "href": "https://docs.vidau.ai"
           },
           {
-            "label": "博客",
+            "label": "Blog",
             "href": "https://blog.vidau.ai"
           },
           {
-            "label": "社区",
+            "label": "Community",
             "href": "https://community.vidau.ai"
           }
         ]
       },
       {
-        "header": "公司",
+        "header": "Company",
         "items": [
           {
-            "label": "关于我们",
+            "label": "About Us",
             "href": "https://www.vidau.ai/about"
           },
           {
-            "label": "联系我们",
+            "label": "Contact",
             "href": "https://www.vidau.ai/contact"
           },
           {
-            "label": "隐私政策",
+            "label": "Privacy Policy",
             "href": "https://www.vidau.ai/privacy-policy/"
           }
         ]
       },
       {
-        "header": "支持",
+        "header": "Support",
         "items": [
           {
-            "label": "帮助中心",
+            "label": "Help Center",
             "href": "https://help.vidau.ai"
           },
           {
-            "label": "状态页面",
+            "label": "Status",
             "href": "https://status.vidau.ai"
           },
           {
-            "label": "提交工单",
+            "label": "Submit Ticket",
             "href": "https://support.vidau.ai"
           }
         ]
@@ -185,8 +185,8 @@
   "errors": {
     "404": {
       "redirect": false,
-      "title": "页面未找到",
-      "description": "抱歉，我们找不到您要查找的页面。请检查URL或返回[首页](/)"
+      "title": "Page Not Found",
+      "description": "Sorry, we couldn't find the page you're looking for. Please check the URL or return to the [homepage](/)"
     }
   }
 }
