@@ -1,0 +1,196 @@
+{
+  "products": [
+    {
+      "name": "Products",
+      "url": "#"
+    },
+    {
+      "name": "Url to Video Ads",
+      "url": "https://www.vidau.ai/product-url-to-video"
+    },
+    {
+      "name": "Material to Video Ads",
+      "url": "https://www.vidau.ai/text-to-video-ai"
+    },
+    {
+      "name": "Sample to Video Ads",
+      "url": "https://www.vidau.ai/sample-to-video-promo/"
+    },
+    {
+      "name": "Video to Script",
+      "url": "https://www.vidau.ai/video-to-text/"
+    },
+    {
+      "name": "UGC Avatars",
+      "url": "https://www.vidau.ai/ai-avatars/"
+    },
+    {
+      "name": "Video Avatars",
+      "url": "https://www.vidau.ai/video-avatar"
+    },
+    {
+      "name": "Photo Avatars",
+      "url": "https://www.vidau.ai/video-avatar"
+    },
+    {
+      "name": "Video Translator",
+      "url": "https://www.vidau.ai/ai-video-translator/"
+    },
+    {
+      "name": "Image to Video",
+      "url": "https://www.vidau.ai/image-to-video-ai/"
+    },
+    {
+      "name": "Video Enhancer",
+      "url": "https://www.vidau.ai/video-quality-enhancer"
+    },
+    {
+      "name": "View More",
+      "url": "https://www.vidau.ai/services/"
+    }
+  ],
+  "logo": {
+    "name": "Vidau Logo",
+    "url": "https://www.vidau.ai/wp-content/uploads/2024/12/logo_white_bottom.webp"
+  },
+  "Solutions": [
+    {
+      "name": "AI Video Ads Creation",
+      "url": "https://www.vidau.ai/ai-video-ads"
+    },
+    {
+      "name": "Video Creative Production",
+      "url": "https://www.vidau.ai/vidau-creative-service/"
+    },
+    {
+      "name": "Marketing Agencies",
+      "url": "https://www.vidau.ai/ai-video-marketing/"
+    },
+    {
+      "name": "E-Commerce",
+      "url": "https://www.vidau.ai/ecommerce-video-ads-maker/"
+    },
+    {
+      "name": "Apps & Software",
+      "url": "https://www.vidau.ai/apps-software-ads-maker/"
+    },
+    {
+      "name": "Finance",
+      "url": "https://www.vidau.ai/financial-ads-maker/"
+    },
+    {
+      "name": "Games",
+      "url": "https://www.vidau.ai/games-ads-maker/"
+    },
+    {
+      "name": "Education",
+      "url": "https://www.vidau.ai/educational-video-editor/"
+    },
+    {
+      "name": "View More",
+      "url": "https://www.vidau.ai/industries-solution/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "Resources",
+      "url": "#"
+    },
+    {
+      "name": "Pricing",
+      "url": "https://www.vidau.ai/vip-price"
+    },
+    {
+      "name": "Case Studies",
+      "url": "https://www.vidau.ai/careers/"
+    },
+    {
+      "name": "Video Tips & Tricks",
+      "url": "https://www.vidau.ai/blogs/"
+    },
+    {
+      "name": "VidAU User Guide",
+      "url": "https://www.vidau.ai/category/user-guide/"
+    },
+    {
+      "name": "Learning Center",
+      "url": "https://www.vidau.ai/learning-center/"
+    },
+    {
+      "name": "VidAU Webinars",
+      "url": "https://www.vidau.ai/community"
+    },
+    {
+      "name": "API Documentation",
+      "url": "https://www.vidau.ai/api/"
+    },
+    {
+      "name": "AI Tools",
+      "url": "https://www.vidau.ai/toolkits/"
+    }
+  ],
+  "company": [
+    {
+      "name": "Company",
+      "url": "#"
+    },
+    {
+      "name": "About Us",
+      "url": "https://www.vidau.ai/about-us/"
+    },
+    {
+      "name": "Careers",
+      "url": "https://www.vidau.ai/careers/"
+    },
+    {
+      "name": "Contact Us",
+      "url": "https://www.vidau.ai/contact-us/"
+    },
+    {
+      "name": "Affiliate Program",
+      "url": "https://www.vidau.ai/affiliate-program"
+    },
+    {
+      "name": "VidAU Partners",
+      "url": "https://www.vidau.ai/partners"
+    },
+    {
+      "name": "Privacy Policy",
+      "url": "https://www.vidau.ai/privacy-policy/"
+    },
+    {
+      "name": "Terms of Service",
+      "url": "https://www.vidau.ai/terms-of-service/"
+    }
+  ],
+  "socials": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/company/vidauai/"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@VidAUAI"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/VidAU.FB"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/vidau_ai/"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://x.com/VidAU_AI"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://www.tiktok.com/@vidau.ai"
+    },
+    {
+      "name": "WhatsApp",
+      "url": "https://chat.whatsapp.com/CMNURHyRbXvGYmfaMvbiU1"
+    }
+  ]
+}

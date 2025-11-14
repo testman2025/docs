@@ -1,0 +1,147 @@
+/* 自定义字体样式 */
+/* 应用Inter字体到整个文档 */
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* 标题字体设置 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* 正文文本字体设置 */
+body, p, li, span, div {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+}
+
+/* 代码块字体设置 */
+code, pre, .code-block {
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Monaco, 'Cascadia Code', monospace !important;
+    font-weight: 400 !important;
+    font-size: 0.9em !important;
+}
+
+/* 自定义左侧导航栏字体大小 */
+.sidebar {
+    font-size: 16px !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.sidebar .group-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.sidebar a {
+    font-size: 15px !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.sidebar a.active {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.sidebar a:hover {
+    font-weight: 500 !important;
+}
+
+/* 语言切换器样式 */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    color: #495057;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.language-toggle:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.language-toggle svg {
+    transition: transform 0.2s ease;
+}
+
+.language-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+}
+
+.language-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    color: #495057;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.language-option:hover {
+    background: #f8f9fa;
+}
+
+.language-option:first-child {
+    border-radius: 6px 6px 0 0;
+}
+
+.language-option:last-child {
+    border-radius: 0 0 6px 6px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .language-switcher {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .language-toggle {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

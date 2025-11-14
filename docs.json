@@ -1,12 +1,26 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "palm",
   "name": "Vidau",
   "description": "Vidau - AI Media Generation Platform",
   "colors": {
     "primary": "#3459FF",
     "light": "#3452FF",
     "dark": "#425DFF"
+  },
+  "fonts": {
+    "heading": {
+      "name": "Inter",
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    },
+    "body": {
+      "name": "Inter",
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+    },
+    "mono": {
+      "name": "Inter",
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+    }
   },
   "navigation": {
     "groups": [
@@ -42,7 +56,8 @@
       {
         "group": "Terms & Agreements",
         "pages": [
-          "terms/terms-and-conditions"
+          "terms/terms-and-conditions",
+          "terms/privacy-policy"
         ]
       }
     ]
@@ -62,35 +77,106 @@
     }
   },
   "logo": {
-    "light": "VidauLogo.png",
-    "dark": "VidauLogo.png",
+    "light": "/VidauLogo.png",
+    "dark": "/VidauLogo.png",
     "href": "https://www.vidau.ai"
-  },
-  "navbar": {
-    "links": []
   },
   "footer": {
     "socials": {
-      "x": "https://twitter.com/vidau",
-      "linkedin": "https://linkedin.com/company/vidau",
-      "github": "https://github.com/vidau",
-      "discord": "https://discord.gg/vidau"
+      "linkedin": "https://www.linkedin.com/company/vidauai/",
+      "youtube": "https://www.youtube.com/@VidAUAI",
+      "facebook": "https://www.facebook.com/VidAU.FB",
+      "instagram": "https://www.instagram.com/vidau_ai/",
+      "x": "https://x.com/VidAU_AI"
     },
     "links": [
       {
-        "header": "Product",
+        "header": "Products",
         "items": [
           {
-            "label": "Features",
-            "href": "https://www.vidau.ai/features"
+            "label": "Url to Video Ads",
+            "href": "https://www.vidau.ai/product-url-to-video"
           },
           {
-            "label": "Pricing",
-            "href": "https://www.vidau.ai/pricing"
+            "label": "Material to Video Ads",
+            "href": "https://www.vidau.ai/text-to-video-ai"
           },
           {
-            "label": "Use Cases",
-            "href": "https://www.vidau.ai/cases"
+            "label": "Sample to Video Ads",
+            "href": "https://www.vidau.ai/sample-to-video-promo/"
+          },
+          {
+            "label": "Video to Script",
+            "href": "https://www.vidau.ai/video-to-text/"
+          },
+          {
+            "label": "UGC Avatars",
+            "href": "https://www.vidau.ai/ai-avatars/"
+          },
+          {
+            "label": "Video Avatars",
+            "href": "https://www.vidau.ai/video-avatar"
+          },
+          {
+            "label": "Photo Avatars",
+            "href": "https://www.vidau.ai/video-avatar"
+          },
+          {
+            "label": "Video Translator",
+            "href": "https://www.vidau.ai/ai-video-translator/"
+          },
+          {
+            "label": "Image to Video",
+            "href": "https://www.vidau.ai/image-to-video-ai/"
+          },
+          {
+            "label": "Video Enhancer",
+            "href": "https://www.vidau.ai/video-quality-enhancer"
+          },
+          {
+            "label": "View More",
+            "href": "https://www.vidau.ai/services/"
+          }
+        ]
+      },
+      {
+        "header": "Solutions",
+        "items": [
+          {
+            "label": "AI Video Ads Creation",
+            "href": "https://www.vidau.ai/ai-video-ads"
+          },
+          {
+            "label": "Video Creative Production",
+            "href": "https://www.vidau.ai/vidau-creative-service/"
+          },
+          {
+            "label": "Marketing Agencies",
+            "href": "https://www.vidau.ai/ai-video-marketing/"
+          },
+          {
+            "label": "E-Commerce",
+            "href": "https://www.vidau.ai/ecommerce-video-ads-maker/"
+          },
+          {
+            "label": "Apps & Software",
+            "href": "https://www.vidau.ai/apps-software-ads-maker/"
+          },
+          {
+            "label": "Finance",
+            "href": "https://www.vidau.ai/financial-ads-maker/"
+          },
+          {
+            "label": "Games",
+            "href": "https://www.vidau.ai/games-ads-maker/"
+          },
+          {
+            "label": "Education",
+            "href": "https://www.vidau.ai/educational-video-editor/"
+          },
+          {
+            "label": "View More",
+            "href": "https://www.vidau.ai/industries-solution/"
           }
         ]
       },
@@ -98,16 +184,36 @@
         "header": "Resources",
         "items": [
           {
-            "label": "Documentation",
-            "href": "https://docs.vidau.ai"
+            "label": "Pricing",
+            "href": "https://www.vidau.ai/vip-price"
           },
           {
-            "label": "Blog",
-            "href": "https://blog.vidau.ai"
+            "label": "Case Studies",
+            "href": "https://www.vidau.ai/careers/"
           },
           {
-            "label": "Community",
-            "href": "https://community.vidau.ai"
+            "label": "Video Tips & Tricks",
+            "href": "https://www.vidau.ai/blogs/"
+          },
+          {
+            "label": "VidAU User Guide",
+            "href": "https://www.vidau.ai/category/user-guide/"
+          },
+          {
+            "label": "Learning Center",
+            "href": "https://www.vidau.ai/learning-center/"
+          },
+          {
+            "label": "VidAU Webinars",
+            "href": "https://www.vidau.ai/community"
+          },
+          {
+            "label": "API Documentation",
+            "href": "https://www.vidau.ai/api/"
+          },
+          {
+            "label": "AI Tools",
+            "href": "https://www.vidau.ai/toolkits/"
           }
         ]
       },
@@ -116,32 +222,31 @@
         "items": [
           {
             "label": "About Us",
-            "href": "https://www.vidau.ai/about"
+            "href": "https://www.vidau.ai/about-us/"
           },
           {
-            "label": "Contact",
-            "href": "https://www.vidau.ai/contact"
+            "label": "Careers",
+            "href": "https://www.vidau.ai/careers/"
+          },
+          {
+            "label": "Contact Us",
+            "href": "https://www.vidau.ai/contact-us/"
+          },
+          {
+            "label": "Affiliate Program",
+            "href": "https://www.vidau.ai/affiliate-program"
+          },
+          {
+            "label": "VidAU Partners",
+            "href": "https://www.vidau.ai/partners"
           },
           {
             "label": "Privacy Policy",
             "href": "https://www.vidau.ai/privacy-policy/"
-          }
-        ]
-      },
-      {
-        "header": "Support",
-        "items": [
-          {
-            "label": "Help Center",
-            "href": "https://help.vidau.ai"
           },
           {
-            "label": "Status",
-            "href": "https://status.vidau.ai"
-          },
-          {
-            "label": "Submit Ticket",
-            "href": "https://support.vidau.ai"
+            "label": "Terms of Service",
+            "href": "https://www.vidau.ai/terms-of-service/"
           }
         ]
       }
@@ -159,22 +264,23 @@
       "value": "vidau_cookie_value"
     }
   },
-  "contextual": {
-    "options": [
-      "view",
-      "chatgpt",
-      "claude"
-    ]
-  },
   "features": {
-    "search": true,
+    "search": {
+      "enabled": true
+    },
     "darkMode": true,
     "tableOfContents": true,
     "breadcrumbs": true
   },
+
   "sidebar": {
     "collapsible": true,
     "autoCollapse": false
+  },
+  "styles": {
+    "css": [
+      "/custom.css"
+    ]
   },
   "errors": {
     "404": {
