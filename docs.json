@@ -67,12 +67,7 @@
     "href": "https://www.vidau.ai"
   },
   "navbar": {
-    "links": [],
-    "primary": {
-      "type": "button",
-      "label": "Console",
-      "href": "https://console.vidau.ai"
-    }
+    "links": []
   },
   "footer": {
     "socials": {
@@ -166,7 +161,6 @@
   },
   "contextual": {
     "options": [
-      "copy",
       "view",
       "chatgpt",
       "claude"
