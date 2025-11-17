@@ -8,20 +8,6 @@
     "light": "#3452FF",
     "dark": "#425DFF"
   },
-  "fonts": {
-    "heading": {
-      "name": "Inter",
-      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    },
-    "body": {
-      "name": "Inter",
-      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
-    },
-    "mono": {
-      "name": "Inter",
-      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
-    }
-  },
   "navigation": {
     "groups": [
       {
