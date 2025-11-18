@@ -5,37 +5,33 @@
     "description": "AI Media Generation Platform API",
     "version": "1.0.0",
     "contact": {
-    "name": "API Support",
-    "url": "https://vidau.ai/support",
-    "email": "api@vidau.ai"
-  }
+      "name": "API Support",
+      "url": "https://vidau.ai/support",
+      "email": "api@vidau.ai"
+    }
   },
   "tags": [
     {
       "name": "text-to-image",
-      "description": "文本到图像生成接口"
+      "description": "Text to Image Generation APIs"
     },
     {
       "name": "image-to-video",
-      "description": "文本到图像生成接口"
+      "description": "Image to Video Generation APIs"
     }
   ],
   "paths": {
     "/v1/image/push": {
       "post": {
-        "summary": "创建任务接口：image/push",
-        "deprecated": false,
-        "description": "",
-        "tags": [
-          "text-to-image"
-        ],
+        "summary": "Create Image Generation Task",
+        "description": "Create a new image generation task based on text prompts",
+        "tags": ["text-to-image"],
         "parameters": [
           {
             "name": "client-id",
             "in": "header",
-            "description": "",
+            "description": "Client ID",
             "required": true,
-            "example": "2135015969.1751274279",
             "schema": {
               "type": "string"
             }
@@ -43,9 +39,8 @@
           {
             "name": "device",
             "in": "header",
-            "description": "",
+            "description": "Device type",
             "required": true,
-            "example": "windows",
             "schema": {
               "type": "string"
             }
@@ -53,9 +48,8 @@
           {
             "name": "device-id",
             "in": "header",
-            "description": "",
+            "description": "Device ID",
             "required": true,
-            "example": "ChHdMH4hxqTT7yUH",
             "schema": {
               "type": "string"
             }
@@ -63,9 +57,8 @@
           {
             "name": "lang",
             "in": "header",
-            "description": "",
+            "description": "Language",
             "required": true,
-            "example": "en",
             "schema": {
               "type": "string"
             }
@@ -73,9 +66,8 @@
           {
             "name": "priority",
             "in": "header",
-            "description": "",
+            "description": "Priority",
             "required": true,
-            "example": "u=1, i",
             "schema": {
               "type": "string"
             }
@@ -83,9 +75,8 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "description": "",
+            "description": "Content Type",
             "required": true,
-            "example": "application/json",
             "schema": {
               "type": "string"
             }
@@ -98,22 +89,28 @@
                 "type": "object",
                 "properties": {
                   "prompt": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Text prompt for image generation"
                   },
                   "quantity": {
-                    "type": "integer"
+                    "type": "integer",
+                    "description": "Number of images to generate"
                   },
                   "ratio": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Image aspect ratio"
                   },
                   "seed": {
-                    "type": "integer"
+                    "type": "integer",
+                    "description": "Random seed for reproducibility"
                   },
                   "imageUrl": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Reference image URL"
                   },
                   "promptUpsampling": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "description": "Whether to upsample the prompt"
                   }
                 },
                 "required": [
@@ -126,50 +123,38 @@
                 ]
               },
               "example": {
-                "prompt": "小狗在天上飞",
+                "prompt": "A dog flying in the sky",
                 "ratio": "9:16",
                 "quantity": 1,
                 "promptUpsampling": false,
-                "seed": "",
-                "taskType": "T2I",
-                "source": 0,
-                "imageUrl": {
-                  "url": "https://res-test.superads.cn/upload/ai_image/b7/b7079d8ca793445ae2c01b2a6a080c5b.png",
-                  "source": 0
-                },
-                "modelName": "image_to_image"
+                "seed": 12345,
+                "imageUrl": "https://res-test.superads.cn/upload/ai_image/b7/b7079d8ca793445ae2c01b2a6a080c5b.png"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "",
+            "description": "Task created successfully",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
                     "ts": {
-                      "type": "integer"
-                    },
-                    "webVersion": {
-                      "type": "null"
+                      "type": "integer",
+                      "description": "Timestamp"
                     },
                     "requestNo": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Request number"
                     },
                     "data": {
                       "type": "object",
                       "properties": {
-                        "createAt": {
-                          "type": "null"
-                        },
-                        "params": {
-                          "type": "null"
-                        },
                         "taskId": {
-                          "type": "string"
+                          "type": "string",
+                          "description": "Task ID"
                         },
                         "list": {
                           "type": "array",
@@ -177,81 +162,49 @@
                             "type": "object",
                             "properties": {
                               "creativeHisId": {
-                                "type": "integer"
-                              },
-                              "filePath": {
-                                "type": "null"
+                                "type": "integer",
+                                "description": "Creative history ID"
                               },
                               "status": {
-                                "type": "integer"
-                              },
-                              "taskId": {
-                                "type": "null"
+                                "type": "integer",
+                                "description": "Task status"
                               }
-                            },
-                            "required": [
-                              "creativeHisId",
-                              "filePath",
-                              "status",
-                              "taskId"
-                            ]
+                            }
                           }
                         },
                         "taskStatus": {
-                          "type": "null"
+                          "type": "integer",
+                          "description": "Overall task status"
                         }
-                      },
-                      "required": [
-                        "createAt",
-                        "params",
-                        "taskId",
-                        "list",
-                        "taskStatus"
-                      ]
+                      }
                     },
                     "code": {
-                      "type": "integer"
+                      "type": "integer",
+                      "description": "Response code"
                     },
                     "msg": {
-                      "type": "string"
-                    },
-                    "exception": {
-                      "type": "null"
+                      "type": "string",
+                      "description": "Response message"
                     }
-                  },
-                  "required": [
-                    "ts",
-                    "webVersion",
-                    "requestNo",
-                    "data",
-                    "code",
-                    "msg",
-                    "exception"
-                  ]
+                  }
                 }
               }
-            },
-            "headers": {}
+            }
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/image/queryTasks": {
       "post": {
-        "summary": "查询任务接口：image/queryTasks",
-        "deprecated": false,
-        "description": "",
-        "tags": [
-          "text-to-image"
-        ],
+        "summary": "Query Image Generation Tasks",
+        "description": "Query the status of image generation tasks",
+        "tags": ["text-to-image"],
         "parameters": [
           {
             "name": "client-id",
             "in": "header",
-            "description": "",
+            "description": "Client ID",
             "required": true,
-            "example": "2135015969.1751274279",
             "schema": {
               "type": "string"
             }
@@ -259,9 +212,8 @@
           {
             "name": "device",
             "in": "header",
-            "description": "",
+            "description": "Device type",
             "required": true,
-            "example": "windows",
             "schema": {
               "type": "string"
             }
@@ -269,9 +221,8 @@
           {
             "name": "device-id",
             "in": "header",
-            "description": "",
+            "description": "Device ID",
             "required": true,
-            "example": "ChHdMH4hxqTT7yUH",
             "schema": {
               "type": "string"
             }
@@ -279,9 +230,8 @@
           {
             "name": "lang",
             "in": "header",
-            "description": "",
+            "description": "Language",
             "required": true,
-            "example": "en",
             "schema": {
               "type": "string"
             }
@@ -289,9 +239,8 @@
           {
             "name": "priority",
             "in": "header",
-            "description": "",
+            "description": "Priority",
             "required": true,
-            "example": "u=1, i",
             "schema": {
               "type": "string"
             }
@@ -299,9 +248,8 @@
           {
             "name": "Content-Type",
             "in": "header",
-            "description": "",
+            "description": "Content Type",
             "required": true,
-            "example": "application/json",
             "schema": {
               "type": "string"
             }
@@ -314,42 +262,40 @@
                 "type": "object",
                 "properties": {
                   "taskId": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Task ID to query"
                   }
                 },
-                "required": [
-                  "taskId"
-                ]
+                "required": ["taskId"]
               },
               "example": {
-                "taskId": "{{AI_image_taskId}}"
+                "taskId": "task_123456"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "",
+            "description": "Query successful",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
                     "ts": {
-                      "type": "integer"
-                    },
-                    "webVersion": {
-                      "type": "null"
+                      "type": "integer",
+                      "description": "Timestamp"
                     },
                     "requestNo": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Request number"
                     },
                     "data": {
                       "type": "object",
                       "properties": {
-                        "createAt": {
+                        "taskId": {
                           "type": "string",
-                          "nullable": true
+                          "description": "Task ID"
                         },
                         "params": {
                           "type": "object",
@@ -366,25 +312,10 @@
                             "prompt": {
                               "type": "string"
                             },
-                            "userId": {
-                              "type": "integer"
-                            },
                             "ratio": {
                               "type": "string"
                             }
-                          },
-                          "required": [
-                            "promptUpsampling",
-                            "quantity",
-                            "seed",
-                            "prompt",
-                            "userId",
-                            "ratio"
-                          ],
-                          "nullable": true
-                        },
-                        "taskId": {
-                          "type": "string"
+                          }
                         },
                         "list": {
                           "type": "array",
@@ -395,8 +326,7 @@
                                 "type": "integer"
                               },
                               "filePath": {
-                                "type": "string",
-                                "nullable": true
+                                "type": "string"
                               },
                               "status": {
                                 "type": "integer"
@@ -404,70 +334,42 @@
                               "taskId": {
                                 "type": "string"
                               }
-                            },
-                            "required": [
-                              "creativeHisId",
-                              "status",
-                              "taskId"
-                            ]
-                          },
-                          "nullable": true
+                            }
+                          }
                         },
                         "taskStatus": {
-                          "type": "integer"
+                          "type": "integer",
+                          "description": "Task status"
                         }
-                      },
-                      "required": [
-                        "createAt",
-                        "params",
-                        "taskId",
-                        "list",
-                        "taskStatus"
-                      ]
+                      }
                     },
                     "code": {
-                      "type": "integer"
+                      "type": "integer",
+                      "description": "Response code"
                     },
                     "msg": {
-                      "type": "string"
-                    },
-                    "exception": {
-                      "type": "null"
+                      "type": "string",
+                      "description": "Response message"
                     }
-                  },
-                  "required": [
-                    "ts",
-                    "webVersion",
-                    "requestNo",
-                    "data",
-                    "code",
-                    "msg",
-                    "exception"
-                  ]
+                  }
                 }
               }
-            },
-            "headers": {}
+            }
           }
-        },
-        "security": []
+        }
       }
     },
     "/i2v/push": {
       "post": {
-        "summary": "创建接口：i2v/push",
-        "deprecated": false,
-        "description": "",
-        "tags": [
-          "image-to-video"
-        ],
+        "summary": "Create Image to Video Task",
+        "description": "Create a video generation task from an image",
+        "tags": ["image-to-video"],
         "parameters": [
           {
             "name": "content-type",
             "in": "header",
-            "description": "",
+            "description": "Content Type",
             "required": true,
-            "example": "application/json",
             "schema": {
               "type": "string"
             }
@@ -475,9 +377,8 @@
           {
             "name": "device",
             "in": "header",
-            "description": "",
+            "description": "Device type",
             "required": true,
-            "example": "windows",
             "schema": {
               "type": "string"
             }
@@ -490,16 +391,20 @@
                 "type": "object",
                 "properties": {
                   "image_url": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Source image URL"
                   },
                   "animation_prompt": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Animation description"
                   },
                   "background_prompt": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Background description"
                   },
                   "video_nums": {
-                    "type": "integer"
+                    "type": "integer",
+                    "description": "Number of videos to generate"
                   }
                 },
                 "required": [
@@ -511,7 +416,7 @@
               },
               "example": {
                 "image_url": "https://res-test.superads.cn/upload/p2v_upload/32/32b0f896baa7710bfb2ca741ec433e3b.jpg",
-                "animation_prompt": "^图^生^视^频",
+                "animation_prompt": "Image to video conversion",
                 "background_prompt": "Lush greenery, Waterfront views, Sea cliffs",
                 "video_nums": 1
               }
@@ -520,68 +425,51 @@
         },
         "responses": {
           "200": {
-            "description": "",
+            "description": "Task created successfully",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
                     "ts": {
-                      "type": "integer"
-                    },
-                    "webVersion": {
-                      "type": "null"
+                      "type": "integer",
+                      "description": "Timestamp"
                     },
                     "requestNo": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Request number"
                     },
                     "data": {
                       "type": "object",
-                      "properties": {}
+                      "description": "Task data"
                     },
                     "code": {
-                      "type": "integer"
+                      "type": "integer",
+                      "description": "Response code"
                     },
                     "msg": {
-                      "type": "string"
-                    },
-                    "exception": {
-                      "type": "null"
+                      "type": "string",
+                      "description": "Response message"
                     }
-                  },
-                  "required": [
-                    "ts",
-                    "webVersion",
-                    "requestNo",
-                    "data",
-                    "code",
-                    "msg",
-                    "exception"
-                  ]
+                  }
                 }
               }
-            },
-            "headers": {}
+            }
           }
-        },
-        "security": []
+        }
       }
     },
     "/i2v/list": {
       "get": {
-        "summary": "查询接口：i2v/list",
-        "deprecated": false,
-        "description": "",
-        "tags": [
-          "image-to-video"
-        ],
+        "summary": "List Image to Video Tasks",
+        "description": "Get a list of image to video conversion tasks",
+        "tags": ["image-to-video"],
         "parameters": [
           {
             "name": "client-id",
             "in": "header",
-            "description": "",
+            "description": "Client ID",
             "required": true,
-            "example": "26739056.1752563534",
             "schema": {
               "type": "string"
             }
@@ -589,9 +477,8 @@
           {
             "name": "device",
             "in": "header",
-            "description": "",
+            "description": "Device type",
             "required": true,
-            "example": "windows",
             "schema": {
               "type": "string"
             }
@@ -599,9 +486,8 @@
           {
             "name": "device-id",
             "in": "header",
-            "description": "",
+            "description": "Device ID",
             "required": true,
-            "example": "v6Fz4ILO57lXEqia",
             "schema": {
               "type": "string"
             }
@@ -609,9 +495,8 @@
           {
             "name": "lang",
             "in": "header",
-            "description": "",
+            "description": "Language",
             "required": true,
-            "example": "en",
             "schema": {
               "type": "string"
             }
@@ -619,9 +504,8 @@
           {
             "name": "priority",
             "in": "header",
-            "description": "",
+            "description": "Priority",
             "required": true,
-            "example": "u=1, i",
             "schema": {
               "type": "string"
             }
@@ -629,26 +513,26 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Query successful",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
                     "ts": {
-                      "type": "integer"
-                    },
-                    "webVersion": {
-                      "type": "null"
+                      "type": "integer",
+                      "description": "Timestamp"
                     },
                     "requestNo": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Request number"
                     },
                     "data": {
                       "type": "object",
                       "properties": {
                         "all_completed": {
-                          "type": "boolean"
+                          "type": "boolean",
+                          "description": "Whether all tasks are completed"
                         },
                         "list": {
                           "type": "array",
@@ -657,96 +541,66 @@
                             "properties": {
                               "thumb_url": {
                                 "type": "string",
-                                "nullable": true
+                                "description": "Thumbnail URL"
                               },
                               "file_url": {
                                 "type": "string",
-                                "nullable": true
+                                "description": "File URL"
                               },
                               "creation_name": {
-                                "type": "string"
+                                "type": "string",
+                                "description": "Creation name"
                               },
                               "post_data": {
-                                "type": "string"
-                              },
-                              "user_task_feedback": {
-                                "type": "object",
-                                "properties": {}
+                                "type": "string",
+                                "description": "Post data"
                               },
                               "created_at": {
-                                "type": "string"
+                                "type": "string",
+                                "description": "Creation time"
                               },
                               "task_id": {
-                                "type": "string"
+                                "type": "string",
+                                "description": "Task ID"
                               },
                               "id": {
-                                "type": "integer"
+                                "type": "integer",
+                                "description": "ID"
                               },
                               "progress_bar": {
-                                "type": "integer"
+                                "type": "integer",
+                                "description": "Progress percentage"
                               },
                               "status": {
-                                "type": "integer"
+                                "type": "integer",
+                                "description": "Task status"
                               }
-                            },
-                            "required": [
-                              "thumb_url",
-                              "file_url",
-                              "creation_name",
-                              "post_data",
-                              "user_task_feedback",
-                              "created_at",
-                              "task_id",
-                              "id",
-                              "progress_bar",
-                              "status"
-                            ]
+                            }
                           }
                         }
-                      },
-                      "required": [
-                        "all_completed",
-                        "list"
-                      ]
+                      }
                     },
                     "code": {
-                      "type": "integer"
+                      "type": "integer",
+                      "description": "Response code"
                     },
                     "msg": {
-                      "type": "string"
-                    },
-                    "exception": {
-                      "type": "null"
+                      "type": "string",
+                      "description": "Response message"
                     }
-                  },
-                  "required": [
-                    "ts",
-                    "webVersion",
-                    "requestNo",
-                    "data",
-                    "code",
-                    "msg",
-                    "exception"
-                  ]
+                  }
                 }
               }
-            },
-            "headers": {}
+            }
           }
-        },
-        "security": []
+        }
       }
     }
-  },
-  "components": {
-    "schemas": {},
-    "securitySchemes": {}
   },
   "servers": [
     {
       "url": "https://api.vidau.ai",
-      "description": "生产环境API服务器"
+      "description": "Production API server"
     }
-  ],
-  "security": []
+  ]
 }
