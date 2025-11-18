@@ -19,40 +19,40 @@
         ]
       },
       {
-  "group": "API Documentation",
-  "pages": [
-    "api/get-api-key",
-    {
-      "group": "文生图 API",
-      "openapi": {
-        "source": "openapi.json",
-        "tag": "工作台/toolkit/文生图"
-      }
-    },
-    {
-      "group": "图生视频 API", 
-      "openapi": {
-        "source": "openapi.json",
-        "tag": "工作台/toolkit/图生视频（TK）"
-      }
-    },
-    {
-      "group": "工作台 API",
-      "openapi": {
-        "source": "openapi.json", 
-        "tag": "工作台"
-      }
-    },
-    {
-      "group": "Toolkit API",
-      "openapi": {
-        "source": "openapi.json",
-        "tag": "工作台/toolkit"
-      }
-    },
-    "api/changelog"
-  ]
-},
+        "group": "API Documentation",
+        "pages": [
+          "api/get-api-key",
+          {
+            "group": "文生图 API",
+            "openapi": {
+              "source": "openapi.json",
+              "tag": "工作台/toolkit/文生图"
+            }
+          },
+          {
+            "group": "图生视频 API",
+            "openapi": {
+              "source": "openapi.json",
+              "tag": "工作台/toolkit/图生视频（TK）"
+            }
+          },
+          {
+            "group": "工作台 API",
+            "openapi": {
+              "source": "openapi.json",
+              "tag": "工作台"
+            }
+          },
+          {
+            "group": "Toolkit API",
+            "openapi": {
+              "source": "openapi.json",
+              "tag": "工作台/toolkit"
+            }
+          },
+          "api/changelog"
+        ]
+      },
       {
         "group": "Terms & Agreements",
         "pages": [
@@ -272,7 +272,6 @@
     "tableOfContents": true,
     "breadcrumbs": true
   },
-
   "sidebar": {
     "collapsible": true,
     "autoCollapse": false
