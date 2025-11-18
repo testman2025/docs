@@ -17,10 +17,10 @@
       "name": "工作台/toolkit"
     },
     {
-      "name": "工作台/toolkit/文生图"
+      "name": "text-to-image"
     },
     {
-      "name": "工作台/toolkit/图生视频（TK）"
+      "name": "image-to-video"
     }
   ],
   "paths": {
@@ -30,7 +30,7 @@
         "deprecated": false,
         "description": "",
         "tags": [
-          "工作台/toolkit/文生图"
+          "text-to-image"
         ],
         "parameters": [
           {
@@ -246,7 +246,7 @@
         "deprecated": false,
         "description": "",
         "tags": [
-          "工作台/toolkit/文生图"
+          "text-to-image"
         ],
         "parameters": [
           {
@@ -462,7 +462,7 @@
         "deprecated": false,
         "description": "",
         "tags": [
-          "工作台/toolkit/图生视频（TK）"
+          "image-to-video"
         ],
         "parameters": [
           {
@@ -576,7 +576,7 @@
         "deprecated": false,
         "description": "",
         "tags": [
-          "工作台/toolkit/图生视频（TK）"
+          "image-to-video"
         ],
         "parameters": [
           {

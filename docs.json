@@ -26,14 +26,14 @@
             "group": "文生图 API",
             "openapi": {
               "source": "openapi.json",
-              "tag": "工作台/toolkit/文生图"
+              "tag": "text-to-image"
             }
           },
           {
             "group": "图生视频 API",
             "openapi": {
               "source": "openapi.json",
-              "tag": "工作台/toolkit/图生视频（TK）"
+              "tag": "image-to-video"
             }
           },
           {
