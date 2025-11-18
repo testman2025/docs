@@ -1,9 +1,13 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "默认模块",
-    "description": "",
-    "version": "1.0.0"
+    "title": "Vidau API",
+    "description": "AI Media Generation Platform API",
+    "version": "1.0.0",
+    "contact": {
+    "name": "API Support",
+    "url": "https://vidau.ai/support",
+    "email": "api@vidau.ai"
   },
   "tags": [
     {
