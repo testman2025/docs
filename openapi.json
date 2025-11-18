@@ -8,13 +8,16 @@
     "name": "API Support",
     "url": "https://vidau.ai/support",
     "email": "api@vidau.ai"
+  }
   },
   "tags": [
     {
-      "name": "text-to-image"
+      "name": "text-to-image",
+      "description": "文本到图像生成接口"
     },
     {
-      "name": "image-to-video"
+      "name": "image-to-video",
+      "description": "文本到图像生成接口"
     }
   ],
   "paths": {
@@ -739,6 +742,11 @@
     "schemas": {},
     "securitySchemes": {}
   },
-  "servers": [],
+  "servers": [
+    {
+      "url": "https://api.vidau.ai",
+      "description": "生产环境API服务器"
+    }
+  ],
   "security": []
 }
