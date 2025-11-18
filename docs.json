@@ -36,6 +36,20 @@
               "tag": "image-to-video"
             }
           },
+          {
+            "group": "工作台 API",
+            "openapi": {
+              "source": "openapi.json",
+              "tag": "工作台"
+            }
+          },
+          {
+            "group": "Toolkit API",
+            "openapi": {
+              "source": "openapi.json",
+              "tag": "工作台/toolkit"
+            }
+          },
           "api/changelog"
         ]
       },
@@ -62,5 +76,216 @@
       ]
     }
   },
-  // ... 其他配置保持不变
+  "logo": {
+    "light": "/VidauLogo.png",
+    "dark": "/VidauLogo.png",
+    "href": "https://www.vidau.ai"
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/vidauai/",
+      "youtube": "https://www.youtube.com/@VidAUAI",
+      "facebook": "https://www.facebook.com/VidAU.FB",
+      "instagram": "https://www.instagram.com/vidau_ai/",
+      "x": "https://x.com/VidAU_AI"
+    },
+    "links": [
+      {
+        "header": "Products",
+        "items": [
+          {
+            "label": "Url to Video Ads",
+            "href": "https://www.vidau.ai/product-url-to-video"
+          },
+          {
+            "label": "Material to Video Ads",
+            "href": "https://www.vidau.ai/text-to-video-ai"
+          },
+          {
+            "label": "Sample to Video Ads",
+            "href": "https://www.vidau.ai/sample-to-video-promo/"
+          },
+          {
+            "label": "Video to Script",
+            "href": "https://www.vidau.ai/video-to-text/"
+          },
+          {
+            "label": "UGC Avatars",
+            "href": "https://www.vidau.ai/ai-avatars/"
+          },
+          {
+            "label": "Video Avatars",
+            "href": "https://www.vidau.ai/video-avatar"
+          },
+          {
+            "label": "Photo Avatars",
+            "href": "https://www.vidau.ai/video-avatar"
+          },
+          {
+            "label": "Video Translator",
+            "href": "https://www.vidau.ai/ai-video-translator/"
+          },
+          {
+            "label": "Image to Video",
+            "href": "https://www.vidau.ai/image-to-video-ai/"
+          },
+          {
+            "label": "Video Enhancer",
+            "href": "https://www.vidau.ai/video-quality-enhancer"
+          },
+          {
+            "label": "View More",
+            "href": "https://www.vidau.ai/services/"
+          }
+        ]
+      },
+      {
+        "header": "Solutions",
+        "items": [
+          {
+            "label": "AI Video Ads Creation",
+            "href": "https://www.vidau.ai/ai-video-ads"
+          },
+          {
+            "label": "Video Creative Production",
+            "href": "https://www.vidau.ai/vidau-creative-service/"
+          },
+          {
+            "label": "Marketing Agencies",
+            "href": "https://www.vidau.ai/ai-video-marketing/"
+          },
+          {
+            "label": "E-Commerce",
+            "href": "https://www.vidau.ai/ecommerce-video-ads-maker/"
+          },
+          {
+            "label": "Apps & Software",
+            "href": "https://www.vidau.ai/apps-software-ads-maker/"
+          },
+          {
+            "label": "Finance",
+            "href": "https://www.vidau.ai/financial-ads-maker/"
+          },
+          {
+            "label": "Games",
+            "href": "https://www.vidau.ai/games-ads-maker/"
+          },
+          {
+            "label": "Education",
+            "href": "https://www.vidau.ai/educational-video-editor/"
+          },
+          {
+            "label": "View More",
+            "href": "https://www.vidau.ai/industries-solution/"
+          }
+        ]
+      },
+      {
+        "header": "Resources",
+        "items": [
+          {
+            "label": "Pricing",
+            "href": "https://www.vidau.ai/vip-price"
+          },
+          {
+            "label": "Case Studies",
+            "href": "https://www.vidau.ai/careers/"
+          },
+          {
+            "label": "Video Tips & Tricks",
+            "href": "https://www.vidau.ai/blogs/"
+          },
+          {
+            "label": "VidAU User Guide",
+            "href": "https://www.vidau.ai/category/user-guide/"
+          },
+          {
+            "label": "Learning Center",
+            "href": "https://www.vidau.ai/learning-center/"
+          },
+          {
+            "label": "VidAU Webinars",
+            "href": "https://www.vidau.ai/community"
+          },
+          {
+            "label": "API Documentation",
+            "href": "https://www.vidau.ai/api/"
+          },
+          {
+            "label": "AI Tools",
+            "href": "https://www.vidau.ai/toolkits/"
+          }
+        ]
+      },
+      {
+        "header": "Company",
+        "items": [
+          {
+            "label": "About Us",
+            "href": "https://www.vidau.ai/about-us/"
+          },
+          {
+            "label": "Careers",
+            "href": "https://www.vidau.ai/careers/"
+          },
+          {
+            "label": "Contact Us",
+            "href": "https://www.vidau.ai/contact-us/"
+          },
+          {
+            "label": "Affiliate Program",
+            "href": "https://www.vidau.ai/affiliate-program"
+          },
+          {
+            "label": "VidAU Partners",
+            "href": "https://www.vidau.ai/partners"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "https://www.vidau.ai/privacy-policy/"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "https://www.vidau.ai/terms-of-service/"
+          }
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-XXXXXXXXXX"
+    },
+    "telemetry": {
+      "enabled": true
+    },
+    "cookies": {
+      "key": "vidau_cookie_key",
+      "value": "vidau_cookie_value"
+    }
+  },
+  "features": {
+    "search": {
+      "enabled": true
+    },
+    "darkMode": true,
+    "tableOfContents": true,
+    "breadcrumbs": true
+  },
+  "sidebar": {
+    "collapsible": true,
+    "autoCollapse": false
+  },
+  "styles": {
+    "css": [
+      "/custom.css"
+    ]
+  },
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "Page Not Found",
+      "description": "Sorry, we couldn't find the page you're looking for. Please check the URL or return to the [homepage](/)"
+    }
+  }
 }
