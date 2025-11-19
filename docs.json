@@ -35,20 +35,6 @@
               "tag": "image-to-video"
             }
           },
-          {
-            "group": "工作台 API",
-            "openapi": {
-              "source": "openapi.json",
-              "tag": "工作台"
-            }
-          },
-          {
-            "group": "Toolkit API",
-            "openapi": {
-              "source": "openapi.json",
-              "tag": "工作台/toolkit"
-            }
-          },
           "api/changelog"
         ]
       },
