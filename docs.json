@@ -20,6 +20,8 @@
       {
         "group": "API Documentation",
         "pages": [
+        "api/get-api-key",
+        "api/changelog",
           {
             "group": "文生图 API",
             "openapi": {
