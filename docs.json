@@ -22,6 +22,7 @@
         "pages": [
         "api/get-api-key",
         "api/changelog",
+        "api/api",
           {
             "group": "文生图 API",
             "openapi": {
