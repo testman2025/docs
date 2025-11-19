@@ -20,7 +20,6 @@
       {
         "group": "API Documentation",
         "pages": [
-          "api/get-api-key",
           {
             "group": "文生图 API",
             "openapi": {
@@ -36,8 +35,7 @@
               "tag": "image-to-video",
               "directory": "api/image-to-video"
             }
-          },
-          "api/changelog"
+          }
         ]
       },
       {
