@@ -107,6 +107,15 @@
                   },
                   "promptUpsampling": {
                     "type": "boolean"
+                  },
+                  "taskType": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "integer"
+                  },
+                  "modelName": {
+                    "type": "string"
                   }
                 },
                 "required": [
@@ -123,13 +132,10 @@
                 "ratio": "9:16",
                 "quantity": 1,
                 "promptUpsampling": false,
-                "seed": "",
+                "seed": 12345,
                 "taskType": "T2I",
                 "source": 0,
-                "imageUrl": {
-                  "url": "https://res-test.superads.cn/upload/ai_image/b7/b7079d8ca793445ae2c01b2a6a080c5b.png",
-                  "source": 0
-                },
+                "imageUrl": "https://res-test.superads.cn/upload/ai_image/b7/b7079d8ca793445ae2c01b2a6a080c5b.png",
                 "modelName": "image_to_image"
               }
             }
