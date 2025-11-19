@@ -25,14 +25,16 @@
             "group": "文生图 API",
             "openapi": {
               "source": "openapi.json",
-              "tag": "text-to-image"
+              "tag": "text-to-image",
+              "directory": "api/text-to-image"
             }
           },
           {
             "group": "图生视频 API",
             "openapi": {
               "source": "openapi.json",
-              "tag": "image-to-video"
+              "tag": "image-to-video",
+              "directory": "api/image-to-video"
             }
           },
           "api/changelog"
