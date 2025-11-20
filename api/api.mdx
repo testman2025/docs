@@ -70,13 +70,6 @@ title: "Vidau AI 视频生成 API 文档"
 | message | String | 日志信息                                                                              |
 | result  | Json   | 结果信息                                                                              |
 
-### 任务状态说明
-
-- **queued**: 任务排队中
-- **running**: 任务处理中
-- **successed**: 任务成功
-- **failed**: 任务失败
-
 ## 错误码
 
 | HTTP CODE | 错误码                        | 错误信息                                         | 错误描述                                                                                          |
@@ -111,18 +104,4 @@ title: "Vidau AI 视频生成 API 文档"
 | 499       | Canceled                   | request canceled by client                   | 请求被取消                                                                                         |
 | 500       | InternalServiceFailure     | internal service failure                     | 服务器内部错误，请稍后重试，或联系客服                                                                           |
 
-## 图片要求
-
-- 图片大小需小于50M
-- 格式只支持 jpg/jpeg/png/webp
-- 图片长宽比需要小于1:4或者4:1
-- 跳舞特效的图片长宽比需要在 1:1.2 至 1:2 之间
-
-## 注意事项
-
-1. Prompt 字符长度不能超过 2000 个字符
-2. 图片URL需要确保可访问
-3. generate_audio 默认为false，枚举值为：
-   - false：不需要音视频直出，输出静音视频
-   - true：需要音视频直出，输出带台词以及背景音的视频
-4. seed 参数当默认不传或者传0时，会使用随机数替代
+## 
