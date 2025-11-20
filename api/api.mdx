@@ -1,34 +1,40 @@
-# Vidau AI 视频生成 API 文档
+---
+title: "Vidau AI 视频生成 API 文档"
+---
 
 ## 创建任务接口
 
 ### 请求信息
+
 - **方法**: POST
 - **URL**: `https://open.vidau.ai/v1/video/createTask`
 
 ### 请求头
-| 字段 | 值 | 描述 |
-|------|-----|------|
-| Content-Type | application/json | 数据交换格式 |
+
+| 字段            | 值                       | 描述                              |
+| ------------- | ----------------------- | ------------------------------- |
+| Content-Type  | application/json        | 数据交换格式                          |
 | Authorization | Bearer `{your api key}` | 将 `{your api key}` 替换为您的 Bearer |
 
 ### 请求体参数
-| 参数名称 | 类型 | 必填 | 参数描述 |
-|----------|------|------|----------|
-| model | String | 是 | 模型名称 |
-| taskUUID | String | 可选 | 创建任务ID，没有随机初始化 |
-| prompt | String | 是 | 文本提示词，字符长度不能超过2000个字符 |
-| negative_prompt | String | 可选 | 文本负向提示词，字符长度不能超过2000个字符 |
-| image_url | String | 可选 | 首帧图像URL |
-| last_image_url | String | 可选 | 尾帧图像URL |
-| ref_image_urls | Array[String] | 可选 | 参考图像URL数组 |
-| generate_audio | Bool | 可选 | 是否使用音视频直出能力 |
-| duration | Int | 可选 | 视频时长 |
-| seed | Int | 可选 | 随机种子 |
-| resolution | String | 可选 | 分辨率参数 |
-| ratio | String | 可选 | 生成视频比例 |
+
+| 参数名称            | 类型            | 必填 | 参数描述                    |
+| --------------- | ------------- | --- | ----------------------- |
+| model           | String        | 是  | 模型名称                    |
+| taskUUID        | String        | 可选 | 创建任务ID，没有随机初始化          |
+| prompt          | String        | 是  | 文本提示词，字符长度不能超过2000个字符   |
+| negative_prompt | String        | 可选 | 文本负向提示词，字符长度不能超过2000个字符 |
+| image_url       | String        | 可选 | 首帧图像URL                 |
+| last_image_url  | String        | 可选 | 尾帧图像URL                 |
+| ref_image_urls  | Array[String] | 可选 | 参考图像URL数组               |
+| generate_audio  | Bool          | 可选 | 是否使用音视频直出能力             |
+| duration        | Int           | 可选 | 视频时长                    |
+| seed            | Int           | 可选 | 随机种子                    |
+| resolution      | String        | 可选 | 分辨率参数                   |
+| ratio           | String        | 可选 | 生成视频比例                  |
 
 ### 支持的模型
+
 - **Sora 2**: `sora@2:normal`
 - **Sora 2 pro**: `sora@2:pro`
 - **Veo 3.1**: `veo@31:normal`
@@ -40,38 +46,44 @@
 - **wan 2.5 preview**: `wan@2.5:preview`
 
 ### 响应体
-| 字段 | 类型 | 描述 |
-|------|------|------|
-| code | String | 生成状态码，创建成功默认值为200 |
-| taskUUID | String | 创建任务ID |
-| message | String | 日志信息 |
+
+| 字段       | 类型     | 描述                |
+| -------- | ------ | ----------------- |
+| code     | String | 生成状态码，创建成功默认值为200 |
+| taskUUID | String | 创建任务ID            |
+| message  | String | 日志信息              |
 
 ## 查询任务接口
 
 ### 请求信息
+
 - **方法**: GET
 - **URL**: `https://open.vidau.ai/v1/queryTask/{taskUUID}/creations`
 
 ### 请求头
-| 字段 | 值 | 描述 |
-|------|-----|------|
-| Content-Type | application/json | 数据交换格式 |
+
+| 字段            | 值                       | 描述                              |
+| ------------- | ----------------------- | ------------------------------- |
+| Content-Type  | application/json        | 数据交换格式                          |
 | Authorization | Bearer `{your api key}` | 将 `{your api key}` 替换为您的 Bearer |
 
 ### 请求参数
-| 参数名称 | 类型 | 必填 | 参数描述 |
-|----------|------|------|----------|
-| taskUUID | String | 是 | 任务id，由创建任务接口创建成功返回 |
+
+| 参数名称     | 类型     | 必填 | 参数描述               |
+| -------- | ------ | --- | ------------------ |
+| taskUUID | String | 是  | 任务id，由创建任务接口创建成功返回 |
 
 ### 响应体
-| 字段 | 类型 | 描述 |
-|------|------|------|
-| code | String | 生成状态码 |
-| task | String | 处理状态 |
-| message | String | 日志信息 |
-| result | Json | 结果信息 |
+
+| 字段      | 类型     | 描述    |
+| ------- | ------ | ----- |
+| code    | String | 生成状态码 |
+| task    | String | 处理状态  |
+| message | String | 日志信息  |
+| result  | Json   | 结果信息  |
 
 ### 任务状态说明
+
 - **queued**: 任务排队中
 - **running**: 任务处理中
 - **successed**: 任务成功
@@ -79,45 +91,47 @@
 
 ## 错误码
 
-| HTTP CODE | 错误码 | 错误信息 | 错误描述 |
-|-----------|--------|----------|----------|
-| 400 | BadRequest | bad request | 不合法的请求 |
-| 400 | FieldLacking | field is missing or empty: `{{.fields}}` | 缺少字段,具体字段见错误信息 |
-| 400 | FieldUnwanted | unwanted field: `{{.fields}}` | 不需要传某些字段，具体字段见错误信息 |
-| 400 | FieldItemCountOutOfRange | field item count out of range: `{{.fields}}` | 字段超限制 |
-| 400 | PageSizeOutOfRange | page size out of range | 图像尺寸有问题 |
-| 400 | ImageDownloadFailure | image download failure | 下载用户图片url失败，请检查链接的有效性 |
-| 400 | OperationInProcess | operation in process, please retry later | 请求在处理中 |
-| 400 | TaskPromptPolicyViolation | prompt policy violation | Prompt 触发安审风控 |
-| 400 | ImageFormatInvalid | invalid image format | 图像格式不符合要求 |
-| 400 | AuditSubmitIllegal | submit is illegal | 输入没有通过安全审核 |
-| 400 | CreditInsufficient | insufficient credits | 积分不足 |
-| 400 | CreationPolicyViolation | creation policy violation | 生成物触发风控 |
-| 400 | ModelUnavailable | model unavailable | 请求的模型不可用 |
-| 400 | UserCancelled | user cancelled | 用户手动终止任务执行 |
-| 400 | FieldInvalid | invalid field: `{{.fields}}` | 传入参数未通过合法性校验 |
-| 400 | ImageCheckBodyJointsFailed | Image Check Body Joins Failed | 输入图人体检测失败，请重新上传 |
-| 400 | ImageCheckFaceFailed | mage Check Face Failed | 输入图人脸检测失败，请重新上传 |
-| 400 | ImageObjectsUndetected | Image BodyJoins or Face Too Much Occlusion | 输入图的人体或人脸有遮挡，请重新上传 |
-| 401 | Unauthorized | unauthorized | 未鉴权 |
-| 403 | Forbidden | forbidden | 请求没有权限 |
-| 404 | TaskNotFound | task not found | Task id 没找到 |
-| 404 | CreationNotFound | creation not found | Creation id 没找到 |
-| 404 | NotFound | not found | 请求资源不存在 |
-| 409 | Conflict | resource conflict | 资源主键冲突 |
-| 429 | QuotaExceeded | quota exceeded | 超过并发限制。请联系商务 |
-| 429 | TooManyRequests | too many requests | 请求太频繁 |
-| 429 | SystemThrottling | system is throttling | 资源超过限制 |
-| 499 | Canceled | request canceled by client | 请求被取消 |
-| 500 | InternalServiceFailure | internal service failure | 服务器内部错误，请稍后重试，或联系客服 |
+| HTTP CODE | 错误码                        | 错误信息                                         | 错误描述                  |
+| --------- | -------------------------- | -------------------------------------------- | --------------------- |
+| 400       | BadRequest                 | bad request                                  | 不合法的请求                |
+| 400       | FieldLacking               | field is missing or empty: `{{.fields}}`     | 缺少字段,具体字段见错误信息        |
+| 400       | FieldUnwanted              | unwanted field: `{{.fields}}`                | 不需要传某些字段，具体字段见错误信息    |
+| 400       | FieldItemCountOutOfRange   | field item count out of range: `{{.fields}}` | 字段超限制                 |
+| 400       | PageSizeOutOfRange         | page size out of range                       | 图像尺寸有问题               |
+| 400       | ImageDownloadFailure       | image download failure                       | 下载用户图片url失败，请检查链接的有效性 |
+| 400       | OperationInProcess         | operation in process, please retry later     | 请求在处理中                |
+| 400       | TaskPromptPolicyViolation  | prompt policy violation                      | Prompt 触发安审风控         |
+| 400       | ImageFormatInvalid         | invalid image format                         | 图像格式不符合要求             |
+| 400       | AuditSubmitIllegal         | submit is illegal                            | 输入没有通过安全审核            |
+| 400       | CreditInsufficient         | insufficient credits                         | 积分不足                  |
+| 400       | CreationPolicyViolation    | creation policy violation                    | 生成物触发风控               |
+| 400       | ModelUnavailable           | model unavailable                            | 请求的模型不可用              |
+| 400       | UserCancelled              | user cancelled                               | 用户手动终止任务执行            |
+| 400       | FieldInvalid               | invalid field: `{{.fields}}`                 | 传入参数未通过合法性校验          |
+| 400       | ImageCheckBodyJointsFailed | Image Check Body Joins Failed                | 输入图人体检测失败，请重新上传       |
+| 400       | ImageCheckFaceFailed       | mage Check Face Failed                       | 输入图人脸检测失败，请重新上传       |
+| 400       | ImageObjectsUndetected     | Image BodyJoins or Face Too Much Occlusion   | 输入图的人体或人脸有遮挡，请重新上传    |
+| 401       | Unauthorized               | unauthorized                                 | 未鉴权                   |
+| 403       | Forbidden                  | forbidden                                    | 请求没有权限                |
+| 404       | TaskNotFound               | task not found                               | Task id 没找到           |
+| 404       | CreationNotFound           | creation not found                           | Creation id 没找到       |
+| 404       | NotFound                   | not found                                    | 请求资源不存在               |
+| 409       | Conflict                   | resource conflict                            | 资源主键冲突                |
+| 429       | QuotaExceeded              | quota exceeded                               | 超过并发限制。请联系商务          |
+| 429       | TooManyRequests            | too many requests                            | 请求太频繁                 |
+| 429       | SystemThrottling           | system is throttling                         | 资源超过限制                |
+| 499       | Canceled                   | request canceled by client                   | 请求被取消                 |
+| 500       | InternalServiceFailure     | internal service failure                     | 服务器内部错误，请稍后重试，或联系客服   |
 
 ## 图片要求
+
 - 图片大小需小于50M
 - 格式只支持 jpg/jpeg/png/webp
 - 图片长宽比需要小于1:4或者4:1
 - 跳舞特效的图片长宽比需要在 1:1.2 至 1:2 之间
 
 ## 注意事项
+
 1. Prompt 字符长度不能超过 2000 个字符
 2. 图片URL需要确保可访问
 3. generate_audio 默认为false，枚举值为：
