@@ -1,0 +1,42 @@
+---
+title: "Create Task Interface"
+---
+
+## Create Task Interface
+
+### Request Information
+
+- **Method**: POST
+- **URL**: `https://open.vidau.ai/v1/video/createTask`
+
+### Request Headers
+
+| Field         | Value                   | Description                    |
+| ------------- | ----------------------- | ------------------------------ |
+| Content-Type  | application/json        | Data exchange format           |
+| Authorization | Bearer `{your api key}` | Replace `{your api key}` with your Bearer token |
+
+### Request Body Parameters
+
+| Parameter Name   | Type          | Required | Description                                                                                                                                                                                                                                                                                             |
+| ---------------- | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| model            | String        | Yes      | Model name: • Vidu: vidu@q2:turbo  • Vidu Pro: vidu@q2:pro                                                                                                                                                                                                                                              |
+| taskUUID         | String        | Optional | Task ID. If not provided, a random UUID will be generated. Example: f5739925-fa8f-41c8-8f33-88aeba1ed365                                                                                                                                                                                                |
+| prompt           | String        | Yes      | Text prompt, maximum 2000 characters                                                                                                                                                                                                                                                                    |
+| negative_prompt  | String        | Optional | Negative text prompt, maximum 2000 characters                                                                                                                                                                                                                                                           |
+| image_url        | String        | Optional | First frame image<br />The model will use the image provided in this parameter as the first frame to generate the video.<br />Image URL (ensure it's accessible)                                                                                                                                        |
+| last_image_url   | String        | Optional | Last frame image<br />The model will use the image provided in this parameter as the last frame to generate the video.<br />Image URL (ensure it's accessible)                                                                                                                                          |
+| ref_image_urls   | Array[String] | Optional | Reference images<br />The model will use the images provided in this parameter as reference frames to generate the video.<br />Image URLs (ensure they're accessible)                                                                                                                                   |
+| generate_audio   | Bool          | Optional | Whether to generate audio with the video. Default is false.<br />Values:<br />- false: Generate silent video<br />- true: Generate video with dialogue and background audio                                                                                                                               |
+| duration         | Int           | Optional | Video duration in seconds                                                                                                                                                                                                                                                                               |
+| seed             | Int           | Optional | Random seed<br />If not provided or set to 0, a random number will be used<br />Manually set seeds will be used as-is                                                                                                                                                                                    |
+| resolution       | String        | Optional | Resolution parameter. Default value depends on the model and video duration                                                                                                                                                                                                                             |
+| ratio            | String        | Optional | Video aspect ratio                                                                                                                                                                                                                                                                                      |
+
+### Response Body
+
+| Field    | Type   | Description                                                                 |
+| -------- | ------ | --------------------------------------------------------------------------- |
+| code     | String | Status code. 200 for success. See error codes table for other values        |
+| taskUUID | String | Returns the provided task ID if given, otherwise generates a random one     |
+| message  | String | Log message                                                                 |

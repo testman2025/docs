@@ -1,107 +1,105 @@
 ---
-title: "Vidau AI 视频生成 API 文档"
+title: "Vidu API Documentation"
 ---
 
-## 创建任务接口
+## Create Task Interface
 
-### 请求信息
+### Request Information
 
-- **方法**: POST
+- **Method**: POST
 - **URL**: `https://open.vidau.ai/v1/video/createTask`
 
-### 请求头
+### Request Headers
 
-| 字段            | 值                       | 描述                              |
-| ------------- | ----------------------- | ------------------------------- |
-| Content-Type  | application/json        | 数据交换格式                          |
-| Authorization | Bearer `{your api key}` | 将 `{your api key}` 替换为您的 Bearer |
+| Field         | Value                   | Description                    |
+| ------------- | ----------------------- | ------------------------------ |
+| Content-Type  | application/json        | Data exchange format           |
+| Authorization | Bearer `{your api key}` | Replace `{your api key}` with your Bearer token |
 
-### 请求体参数
+### Request Body Parameters
 
-| 参数名称            | 类型            | 必填 | 参数描述                                                                                                                                                                                                                                                                                           |
-| --------------- | ------------- | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| model           | String        | 是  | 模型名称：• Sora 2：sora@2:normal  • Sora 2 pro: sora@2:pro  • Veo 3.1: veo@31:normal  • Veo 3.1 fast: veo@31:fast  • seedance 1.0 pro: seedance@1:pro  • Seedance 1.0 pro fast: seedance@1:pro_fast  • Vidu q2 turbo: vidu@q2:turbo  • Vidu q2 pro: vidu@q2:pro  • wan 2.5 preview: wan@2.5:preview |
-| taskUUID        | String        | 可选 | 创建任务ID，没有随机初始化，参考值：f5739925-fa8f-41c8-8f33-88aeba1ed365                                                                                                                                                                                                                                        |
-| prompt          | String        | 是  | 文本提示词，字符长度不能超过2000个字符                                                                                                                                                                                                                                                                          |
-| negative_prompt | String        | 可选 | 文本负向提示词，字符长度不能超过2000个字符                                                                                                                                                                                                                                                                        |
-| image_url       | String        | 可选 | 首帧图像<br />模型将以此参数中传入的图片为首帧画面来生成视频。<br />图片URL（确保可访问）                                                                                                                                                                                                                                           |
-| last_image_url  | String        | 可选 | 尾帧图像<br />模型将以此参数中传入的图片为尾帧画面来生成视频。<br />图片URL（确保可访问）                                                                                                                                                                                                                                           |
-| ref_image_urls  | Array[String] | 可选 | 参考图像<br />模型将以此参数中传入的图片为参考画面来生成视频。<br />图片URL（确保可访问）                                                                                                                                                                                                                                           |
-| generate_audio  | Bool          | 可选 | 是否使用音视频直出能力，默认为false，枚举值为：<br />- false：不需要音视频直出，输出静音视频<br />- true：需要音视频直出，输出带台词以及背景音的视频                                                                                                                                                                                                      |
-| duration        | Int           | 可选 | 视频时长                                                                                                                                                                                                                                                                                           |
-| seed            | Int           | 可选 | 随机种子<br />当默认不传或者传0时，会使用随机数替代<br />手动设置则使用设置的种子                                                                                                                                                                                                                                                |
-| resolution      | String        | 可选 | 分辨率参数，默认值依据模型和视频时长而定                                                                                                                                                                                                                                                                           |
-| ratio           | String        | 可选 | 生成视频比例                                                                                                                                                                                                                                                                                         |
+| Parameter Name   | Type          | Required | Description                                                                                                                                                                                                                                                                                             |
+| ---------------- | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| model            | String        | Yes      | Model name: • Vidu: vidu@q2:turbo  • Vidu Pro: vidu@q2:pro                                                                                                                                                                                                                                              |
+| taskUUID         | String        | Optional | Task ID. If not provided, a random UUID will be generated. Example: f5739925-fa8f-41c8-8f33-88aeba1ed365                                                                                                                                                                                                |
+| prompt           | String        | Yes      | Text prompt, maximum 2000 characters                                                                                                                                                                                                                                                                    |
+| negative_prompt  | String        | Optional | Negative text prompt, maximum 2000 characters                                                                                                                                                                                                                                                           |
+| image_url        | String        | Optional | First frame image<br />The model will use the image provided in this parameter as the first frame to generate the video.<br />Image URL (ensure it's accessible)                                                                                                                                        |
+| last_image_url   | String        | Optional | Last frame image<br />The model will use the image provided in this parameter as the last frame to generate the video.<br />Image URL (ensure it's accessible)                                                                                                                                          |
+| ref_image_urls   | Array[String] | Optional | Reference images<br />The model will use the images provided in this parameter as reference frames to generate the video.<br />Image URLs (ensure they're accessible)                                                                                                                                   |
+| generate_audio   | Bool          | Optional | Whether to generate audio with the video. Default is false.<br />Values:<br />- false: Generate silent video<br />- true: Generate video with dialogue and background audio                                                                                                                               |
+| duration         | Int           | Optional | Video duration in seconds                                                                                                                                                                                                                                                                               |
+| seed             | Int           | Optional | Random seed<br />If not provided or set to 0, a random number will be used<br />Manually set seeds will be used as-is                                                                                                                                                                                    |
+| resolution       | String        | Optional | Resolution parameter. Default value depends on the model and video duration                                                                                                                                                                                                                             |
+| ratio            | String        | Optional | Video aspect ratio                                                                                                                                                                                                                                                                                      |
 
-### 响应体
+### Response Body
 
-| 字段       | 类型     | 描述                              |
-| -------- | ------ | ------------------------------- |
-| code     | String | 生成状态码，创建成功，默认值为200，异常情况，见错误码列表  |
-| taskUUID | String | 创建任务ID不为空，则返回原值，创建任务ID为空，则返回随机值 |
-| message  | String | 日志信息                            |
+| Field    | Type   | Description                                                                 |
+| -------- | ------ | --------------------------------------------------------------------------- |
+| code     | String | Status code. 200 for success. See error codes table for other values        |
+| taskUUID | String | Returns the provided task ID if given, otherwise generates a random one     |
+| message  | String | Log message                                                                 |
 
-## 查询任务接口
+## Query Task Interface
 
-### 请求信息
+### Request Information
 
-- **方法**: GET
+- **Method**: GET
 - **URL**: `https://open.vidau.ai/v1/queryTask/{taskUUID}/creations`
 
-### 请求头
+### Request Headers
 
-| 字段            | 值                       | 描述                              |
-| ------------- | ----------------------- | ------------------------------- |
-| Content-Type  | application/json        | 数据交换格式                          |
-| Authorization | Bearer `{your api key}` | 将 `{your api key}` 替换为您的 Bearer |
+| Field         | Value                   | Description                    |
+| ------------- | ----------------------- | ------------------------------ |
+| Content-Type  | application/json        | Data exchange format           |
+| Authorization | Bearer `{your api key}` | Replace `{your api key}` with your Bearer token |
 
-### 请求参数
+### Request Parameters
 
-| 参数名称     | 类型     | 必填 | 参数描述               |
-| -------- | ------ | --- | ------------------ |
-| taskUUID | String | 是  | 任务id，由创建任务接口创建成功返回 |
+| Parameter Name | Type   | Required | Description                                       |
+| -------------- | ------ | -------- | ------------------------------------------------- |
+| taskUUID       | String | Yes      | Task ID returned from successful task creation    |
 
-### 响应体
+### Response Body
 
-| 字段      | 类型     | 描述                                                                                |
-| ------- | ------ | --------------------------------------------------------------------------------- |
-| code    | String | 生成状态码，创建成功，默认值为200，异常情况，见错误码列表                                                    |
-| task    | String | 处理状态：<br />queued  任务排队中<br />running  任务处理中<br />successed 任务成功<br />failed 任务失败 |
-| message | String | 日志信息                                                                              |
-| result  | Json   | 结果信息                                                                              |
+| Field   | Type   | Description                                                                                                                                 |
+| ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| code    | String | Status code. 200 for success. See error codes table for other values                                                                        |
+| task    | String | Processing status:<br />queued - Task queued<br />running - Task processing<br />successed - Task succeeded<br />failed - Task failed        |
+| message | String | Log message                                                                                                                                 |
+| result  | Json   | Result information                                                                                                                          |
 
-## 错误码
+## Error Codes
 
-| HTTP CODE | 错误码                        | 错误信息                                         | 错误描述                                                                                          |
-| --------- | -------------------------- | -------------------------------------------- | :-------------------------------------------------------------------------------------------- |
-| 400       | BadRequest                 | bad request                                  | 不合法的请求                                                                                        |
-| 400       | FieldLacking               | field is missing or empty: `{{.fields}}`     | 缺少字段,具体字段见错误信息                                                                                |
-| 400       | FieldUnwanted              | unwanted field: `{{.fields}}`                | 不需要传某些字段，具体字段见错误信息                                                                            |
-| 400       | FieldItemCountOutOfRange   | field item count out of range: `{{.fields}}` | 字段超限制                                                                                         |
-| 400       | PageSizeOutOfRange         | page size out of range                       | 图像尺寸有问题。要求：图片大小需小于50M,格式只支持 jpg/jpeg/png/webp, 图片长宽比需要小于1:4或者4:1，跳舞特效的图片长宽比需要在 1:1.2 至 1:2 之间 |
-| 400       | ImageDownloadFailure       | image download failure                       | 下载用户图片url失败，请检查链接的有效性                                                                         |
-| 400       | OperationInProcess         | operation in process, please retry later     | 请求在处理中                                                                                        |
-| 400       | TaskPromptPolicyViolation  | prompt policy violation                      | Prompt 触发安审风控                                                                                 |
-| 400       | ImageFormatInvalid         | invalid image format                         | 图像格式不符合要求                                                                                     |
-| 400       | AuditSubmitIllegal         | submit is illegal                            | 输入没有通过安全审核                                                                                    |
-| 400       | CreditInsufficient         | insufficient credits                         | 积分不足                                                                                          |
-| 400       | CreationPolicyViolation    | creation policy violation                    | 生成物触发风控                                                                                       |
-| 400       | ModelUnavailable           | model unavailable                            | 请求的模型不可用，调用任务失败，请检查模型类型并重试                                                                    |
-| 400       | UserCancelled              | user cancelled                               | 用户手动终止任务执行                                                                                    |
-| 400       | FieldInvalid               | invalid field: `{{.fields}}`                 | 传入参数未通过合法性校验                                                                                  |
-| 400       | ImageCheckBodyJointsFailed | Image Check Body Joins Failed                | 输入图人体检测失败，请重新上传                                                                               |
-| 400       | ImageCheckFaceFailed       | mage Check Face Failed                       | 输入图人脸检测失败，请重新上传                                                                               |
-| 400       | ImageObjectsUndetected     | Image BodyJoins or Face Too Much Occlusion   | 输入图的人体或人脸有遮挡，请重新上传                                                                            |
-| 401       | Unauthorized               | unauthorized                                 | 未鉴权                                                                                           |
-| 403       | Forbidden                  | forbidden                                    | 请求没有权限                                                                                        |
-| 404       | TaskNotFound               | task not found                               | Task id 没找到                                                                                   |
-| 404       | CreationNotFound           | creation not found                           | Creation id 没找到                                                                               |
-| 404       | NotFound                   | not found                                    | 请求资源不存在                                                                                       |
-| 409       | Conflict                   | resource conflict                            | 资源主键冲突                                                                                        |
-| 429       | QuotaExceeded              | quota exceeded                               | 超过并发限制。请联系商务                                                                                  |
-| 429       | TooManyRequests            | too many requests                            | 请求太频繁                                                                                         |
-| 429       | SystemThrottling           | system is throttling                         | 资源超过限制                                                                                        |
-| 499       | Canceled                   | request canceled by client                   | 请求被取消                                                                                         |
-| 500       | InternalServiceFailure     | internal service failure                     | 服务器内部错误，请稍后重试，或联系客服                                                                           |
-
-## 
+| HTTP CODE | Error Code                     | Error Message                                | Description                                                                                          |
+| --------- | ------------------------------ | -------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| 400       | BadRequest                     | bad request                                  | Invalid request                                                                                      |
+| 400       | FieldLacking                   | field is missing or empty: `{{.fields}}`     | Missing field(s). See error message for details                                                      |
+| 400       | FieldUnwanted                  | unwanted field: `{{.fields}}`                | Unnecessary field(s) provided. See error message for details                                         |
+| 400       | FieldItemCountOutOfRange       | field item count out of range: `{{.fields}}` | Field exceeds limits                                                                                 |
+| 400       | PageSizeOutOfRange             | page size out of range                       | Image dimensions issue. Requirements: Image size must be less than 50MB, supported formats are jpg/jpeg/png/webp, aspect ratio must be between 1:4 and 4:1 |
+| 400       | ImageDownloadFailure           | image download failure                       | Failed to download image URL. Please check URL validity                                              |
+| 400       | OperationInProcess             | operation in process, please retry later     | Request is being processed                                                                           |
+| 400       | TaskPromptPolicyViolation      | prompt policy violation                      | Prompt triggered content policy                                                                      |
+| 400       | ImageFormatInvalid             | invalid image format                         | Image format not supported                                                                           |
+| 400       | AuditSubmitIllegal             | submit is illegal                            | Input failed security review                                                                         |
+| 400       | CreditInsufficient             | insufficient credits                         | Insufficient credits                                                                                 |
+| 400       | CreationPolicyViolation        | creation policy violation                    | Generated content triggered policy                                                                   |
+| 400       | ModelUnavailable               | model unavailable                            | Requested model is unavailable. Please check model type and retry                                    |
+| 400       | UserCancelled                  | user cancelled                               | User manually terminated task execution                                                              |
+| 400       | FieldInvalid                   | invalid field: `{{.fields}}`                 | Input parameter failed validation                                                                    |
+| 400       | ImageCheckBodyJointsFailed     | Image Check Body Joints Failed               | Human body detection failed in input image. Please re-upload                                     |
+| 400       | ImageCheckFaceFailed           | Image Check Face Failed                      | Face detection failed in input image. Please re-upload                                           |
+| 400       | ImageObjectsUndetected         | Image Body Joints or Face Too Much Occlusion | Human body or face in input image is occluded. Please re-upload                                  |
+| 401       | Unauthorized                   | unauthorized                                 | Authentication required                                                                              |
+| 403       | Forbidden                      | forbidden                                    | Access denied                                                                                        |
+| 404       | TaskNotFound                   | task not found                               | Task ID not found                                                                                    |
+| 404       | CreationNotFound               | creation not found                           | Creation ID not found                                                                                |
+| 404       | NotFound                       | not found                                    | Requested resource not found                                                                         |
+| 409       | Conflict                       | resource conflict                            | Resource key conflict                                                                                |
+| 429       | QuotaExceeded                  | quota exceeded                               | Concurrent limit exceeded. Please contact support                                                    |
+| 429       | TooManyRequests                | too many requests                            | Request rate too high                                                                                |
+| 429       | SystemThrottling               | system is throttling                         | Resource limit exceeded                                                                              |
+| 499       | Canceled                       | request canceled by client                   | Request cancelled                                                                                    |
+| 500       | InternalServiceFailure         | internal service failure                     | Internal server error. Please retry later or contact support                                         |

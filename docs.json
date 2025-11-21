@@ -21,8 +21,9 @@
         "group": "API Documentation",
         "pages": [
         "api/get-api-key",
-        "api/changelog",
-        "api/api",
+        "api/create-task",
+        "api/query-task",
+        "api/error-codes",
           {
             "group": "文生图 API",
             "openapi": {

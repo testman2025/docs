@@ -1,11 +1,29 @@
 ---
-title: "如何获取API秘钥"
+title: "How to Get Your API Key"
 ---
 
-# 简介
+## How to Get Your API Key
 
-# 获取方法
+To use the Vidu API, you need to obtain an API key. Follow these steps to get your API key:
 
-# 使用示例
+1. **Sign Up**: Visit the Vidu platform website and create an account.
+2. **Log In**: Once registered, log in to your account.
+3. **Access API Keys Section**: Navigate to the API Keys section in your account dashboard.
+4. **Generate API Key**: Click on the "Generate API Key" button.
+5. **Save Your Key**: Copy and securely store your API key. For security reasons, you won't be able to view it again after leaving the page.
 
-# 使用注意事项
+### Using Your API Key
+
+To authenticate your API requests, include your API key in the Authorization header of your requests:
+
+```
+Authorization: Bearer YOUR_API_KEY
+```
+
+Replace `YOUR_API_KEY` with the actual API key you generated.
+
+### Security Best Practices
+
+- Keep your API key secure and do not share it publicly.
+- Regenerate your API key if you suspect it has been compromised.
+- Use environment variables or secure vaults to store your API keys in applications.

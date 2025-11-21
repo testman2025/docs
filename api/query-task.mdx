@@ -1,0 +1,50 @@
+---
+title: "Query Task Interface"
+---
+
+## Query Task Interface
+
+### Request Information
+
+- **Method**: GET
+- **URL**: `https://open.vidau.ai/v1/queryTask/{taskUUID}/creations`
+
+### Request Headers
+
+| Field         | Value                   | Description                    |
+| ------------- | ----------------------- | ------------------------------ |
+| Content-Type  | application/json        | Data exchange format           |
+| Authorization | Bearer `{your api key}` | Replace `{your api key}` with your Bearer token |
+
+### Path Parameters
+
+| Parameter Name | Type   | Required | Description                     |
+| -------------- | ------ | -------- | ------------------------------- |
+| taskUUID       | String | Yes      | Task ID returned by createTask  |
+
+### Response Body
+
+| Field    | Type   | Description                                                                 |
+| -------- | ------ | --------------------------------------------------------------------------- |
+| code     | String | Status code. 200 for success. See error codes table for other values        |
+| data     | Object | Data object containing task information                                     |
+| message  | String | Log message                                                                 |
+
+#### Data Object Structure
+
+| Field      | Type   | Description                          |
+| ---------- | ------ | ------------------------------------ |
+| taskUUID   | String | Task ID                              |
+| status     | String | Task status (processing, completed)  |
+| videos     | Array  | Array of generated video information |
+| createTime | String | Task creation time                   |
+| updateTime | String | Task update time                     |
+
+#### Videos Array Item Structure
+
+| Field      | Type   | Description                |
+| ---------- | ------ | -------------------------- |
+| url        | String | Video URL                  |
+| duration   | Int    | Video duration in seconds  |
+| resolution | String | Video resolution           |
+| size       | Int    | Video file size in bytes   |
