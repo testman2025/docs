@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "palm",
+  "theme": "mint",
   "name": "Vidau",
   "description": "Vidau - AI Media Generation Platform",
   "colors": {
